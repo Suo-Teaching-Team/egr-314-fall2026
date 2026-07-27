@@ -1,0 +1,85 @@
+site_name: Embedded Systems Assignments
+repo_url: https://github.com/embedded-systems-design/project_esd_assignments
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  custom_dir: custom_theme/
+  palette:
+    primary: blue-grey
+    accent: deep-orange
+  features:
+#    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.indexes
+    # - navigation.prune
+    # - navigation.expand
+    - toc.follow    
+#    - toc.integrate 
+    - navigation.top
+    - content.action.edit
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tilde: {}
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+      
+draft_docs: |
+  **/*_unpublished.md
+  **/*_draft.md
+  **/*_draft**
+  
+plugins:
+  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - search
+  # - offline
+
+extra_css:
+  - stylesheets/extra.css  
+
+extra_javascript:
+ - javascripts/mathjax.js
+ - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# not_in_nav: 3x4/,314/
+  # - 3x4
+
+# not_in_nav:  | 
+#   304/
+#   3x4/
+#   314/
+    
+nav:
+  - index.md
+  - "314":
+      - "Selcome": 314/index.md
+      - "Syllabus" : 314/syllabus/
+      - "Project Info": 
+        - "Project Description": 314/project-description/
+        - "Protocol Specification": "314/project-description/protocol/"
+  - "3X4": 
+      - "course sequence requirements": 3x4/course-sequence-requirements.md 
+      - "submission best practices": 3x4/submission-best-practices.md 
+
+copyright: Copyright &copy; 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+
+extra:
+  generator: false
+  # social:
+  #   - icon: fontawesome/regular/file-code
+  #     link: /2023_fall
+  #     name: 2023 Site  

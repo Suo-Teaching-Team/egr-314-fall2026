@@ -1,0 +1,53 @@
+# derived from 
+#<https://github.com/marketplace/actions/mkdocs-action>
+#<https://gist.github.com/liflovs/f2a950dadcca25a0dbdfe10f53f5c838>
+#<https://stackoverflow.com/questions/64374179/how-to-push-to-another-repository-in-github-actions>
+#<https://stackoverflow.com/questions/41714882/git-how-to-clone-with-ssh-key-username>
+
+name: mkdocs-build
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    name: build mkdocs
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v4
+
+    - name: Build
+      uses: Tiryoh/actions-mkdocs@v0
+      with:
+        # mkdocs_version: '1.6.1' # option
+        requirements: 'requirements.txt' # option
+        configfile: 'mkdocs.yml' # option
+
+    - name: Deploy
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.BB_SECRET }}
+        EXTERNAL_REPOSITORY: bitbucket.org:egr314-oc/egr314-oc.bitbucket.io.git
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./site
+        GIT_SSH_COMMAND: "ssh -o IdentityFile=~/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
+      run: |
+        mkdir -p ~/.ssh
+        echo "$ACTIONS_DEPLOY_KEY" > ~/.ssh/id_ed25519
+        chmod 600  ~/.ssh/id_ed25519
+
+        git config --global user.name "danaukes"
+        git config --global user.email "danaukes@danaukes.com"
+
+        git clone git@$EXTERNAL_REPOSITORY 
+
+        cd "egr314-oc.bitbucket.io"
+
+        git rm -r *
+        cp -r ../site/* ./
+        git add *
+        git commit -m "automated push"
+        git remote -v
+        git push
