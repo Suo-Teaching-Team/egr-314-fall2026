@@ -1,0 +1,1855 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Embedded Systems Design Project II Syllabus - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#egr-314-course-catalog-description" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Embedded Systems Design Project II Syllabus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#egr-314-course-catalog-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      EGR 314 Course Catalog Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#egr-314-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      EGR 314 Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Dates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#office-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Office Hours
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructional-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructional Team
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructional Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#professor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Professor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#student-instructional-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Student Instructional Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webpages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webpages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Textbook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classroom Safety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-and-network-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer and Network Recommendations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Learning Outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#professionalism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Professionalism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attendance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attendance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Expectations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deliverables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Checkpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-draft-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial-Draft Assignments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demonstrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-structure-assessment-and-grading-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Structure, Assessment, and Grading Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Structure, Assessment, and Grading Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of Assignments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grading-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grading Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grading-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading Scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#late-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Late Assignments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-grading-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Grading Rubric
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/syllabus/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Embedded Systems Design Project II Syllabus</h1>
+
+<h2 id="egr-314-course-catalog-description">EGR 314 Course Catalog Description</h2>
+<!--
+Design, implement and debug an embedded electromechanical system through an in-depth design project. Develops professional and engineering skills in this project setting.
+-->
+
+<p>Applies design principles to conceptualize, implement and characterize an embedded electromechanical system in a project setting. Project emphasizes communication with project stakeholders; applying a human-centered design approach in the context of an embedded system; critical thinking in developing system specifications and evaluating a prototype relative to these specifications; and increasing technical competence.</p>
+<h2 id="course-information">Course Information</h2>
+<h3 id="sections">Sections</h3>
+<table>
+<thead>
+<tr>
+<th>Section #</th>
+<th>Instructor</th>
+<th>Days and Times</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13574</td>
+<td>Dr. Daniel M. Aukes</td>
+<td>M/W 9am - 10:15am</td>
+</tr>
+<tr>
+<td>17192</td>
+<td>Dr. Kevin Nichols</td>
+<td>M/W 12pm - 1:15pm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Physical Location:</strong> ASU Polytechnic Campus, Peralta Hall, Room 103 (PRLTA 103)<br>
+<strong>Number of Units:</strong> 3  </p>
+<!--
+### EGR 304 Prerequisites
+
+-   EGR 202, EGR 216, and EGR 219 with C or better
+
+-->
+<h3 id="egr-314-prerequisites">EGR 314 Prerequisites</h3>
+<ul>
+<li>Required: Embedded Systems Design Project I (EGR 304 or RAS 304) with C or better</li>
+<li>Recommended Co-Requisite: Microcontrollers in Smart Systems (EGR 338)</li>
+</ul>
+<h3 id="important-dates">Important Dates</h3>
+<table>
+<thead>
+<tr>
+<th>Holiday</th>
+<th>Date</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Martin Luther King Jr. Day</td>
+<td>January 20, 2025</td>
+<td>No Class / Office Hours</td>
+</tr>
+<tr>
+<td>Spring Break</td>
+<td>March 9-16, 2025</td>
+<td>No Class / Office Hours</td>
+</tr>
+<tr>
+<td>Innovation Showcase</td>
+<td>May 2, 2024</td>
+<td><strong>Attendance is Mandatory</strong></td>
+</tr>
+<tr>
+<td>Exam Week</td>
+<td>May 9-5, 2025</td>
+<td>No Class / Office Hours</td>
+</tr>
+</tbody>
+</table>
+<!-- - *Labor Day Observed*: Monday, September 2, 2024
+- *Fall Break*: October 12 - 15, 2024
+- *Veteran`s Day Observed*: Monday, November 11, 2024
+- *Thanksgiving Holiday Observed*: November 28 - 29, 2024
+
+- -->
+
+<h3 id="office-hours">Office Hours</h3>
+<p>Office Hours will be held according to the <a href="https://docs.google.com/document/d/1Z6ix8MyOjrlEu4qXi1p-HQruRA4KbK9bwwUxIvTUcTA/edit?usp=sharing">Office Hours schedule</a> starting week 2.</p>
+<h2 id="instructional-team">Instructional Team</h2>
+<h3 id="professor">Professor</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Office</th>
+<th>Photo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://isearch.asu.edu/profile/2727366">Dr. Daniel Aukes</a></td>
+<td><a href="mailto:danaukes@asu.edu">danaukes@asu.edu</a></td>
+<td>Tech 152</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="danaukes.png" data-desc-position="bottom"><img alt="" height="200" src="danaukes.png" style="height:100px;"></a></td>
+</tr>
+<tr>
+<td><a href="https://isearch.asu.edu/profile/361106">Dr. Kevin Nichols</a></td>
+<td><a href="mailto:kwnicho@asu.edu">kwnicho@asu.edu</a></td>
+<td>Peralta Hall, 330L</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Nichols-Kevin.png" data-desc-position="bottom"><img alt="" height="200" src="Nichols-Kevin.png" style="height:100px;"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="student-instructional-team">Student Instructional Team</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Email</th>
+<th style="text-align: right;">Position</th>
+<th style="text-align: center;">Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: right;">grader</td>
+<td style="text-align: center;">AM</td>
+</tr>
+<tr>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: right;">grader</td>
+<td style="text-align: center;">PM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ean Potter</td>
+<td style="text-align: left;"><a href="mailto:ehpotter@asu.edu">ehpotter@asu.edu</a></td>
+<td style="text-align: right;">UGTA</td>
+<td style="text-align: center;">AM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Anthony Alvarado</td>
+<td style="text-align: left;"><a href="mailto:atalvar1@asu.edu">atalvar1@asu.edu</a></td>
+<td style="text-align: right;">UGTA</td>
+<td style="text-align: center;">AM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Joseph Pelle</td>
+<td style="text-align: left;"><a href="mailto:jpelle1@asu.edu">jpelle1@asu.edu</a></td>
+<td style="text-align: right;">UGTA</td>
+<td style="text-align: center;">PM</td>
+</tr>
+<tr>
+<td style="text-align: left;">Justin Hanson</td>
+<td style="text-align: left;"><a href="mailto:jthanso6@asu.edu">jthanso6@asu.edu</a></td>
+<td style="text-align: right;">UGTA</td>
+<td style="text-align: center;">PM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="questions">Questions</h3>
+<p>Post all questions to the Canvas discussion board to reach the professor, Student Instructional Team, and other members of the class.</p>
+<blockquote>
+<p><strong>Attention:</strong> Do not send emails through Canvas.</p>
+</blockquote>
+<h2 id="project-information">Project Information</h2>
+<p>Please see the following two documents for more detailed information on the design project and requirements:</p>
+<ul>
+<li><a href="/314/project-description/">EGR 314 Project Description</a></li>
+<li><a href="/3x4/course-sequence-requirements/">EGR 304/314 Course Sequence Requirements</a></li>
+</ul>
+<h2 id="webpages">Webpages</h2>
+<ul>
+<li>Canvas (includes calendar, discussions, assignments): <a href="http://canvas.asu.edu">http://canvas.asu.edu</a></li>
+<li>Embedded Systems Design Resources: <a href="https://embedded-systems-design.github.io">https://embedded-systems-design.github.io</a></li>
+<li>Peralta Engineering Studios Information: <a href="http://links.asu.edu/peralta">http://links.asu.edu/peralta</a></li>
+</ul>
+<h2 id="textbook">Textbook</h2>
+<ul>
+<li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542 <strong><em>(Required).</em> E-book available</strong></li>
+</ul>
+<!-- - Ulrich, K., Eppinger, S., Yang, M. [Product Design and Development, 7th Edition](https://www.amazon.com/Product-Design-Development-Karl-Ulrich/dp/1260566439/ref=sr_1_1?keywords=product+design+and+development+7th+edition&qid=1660414604&s=books&sprefix=product+design+and+development+7th+%2Cstripbooks%2C143&sr=1-1). McGraw-Hill Education. ISBN-13:‎ 978-1260566437 *(suggested)* **E-book available.** -->
+
+<h2 id="classroom-safety">Classroom Safety</h2>
+<p>Approved personal protection equipment (PPE) is required when working in any ASU laboratory. Since Peralta 103 is an integrated classroom-laboratory workspace, <strong>close-toe shoes</strong> are <strong><ins>mandatory at all times</ins></strong>, and food / drink should not be consumed. When you do solder, remember it is required to turn on fume hoods and to wear safety glasses while soldering. Additionally, Peralta 103 and 109 are a non-lead solder work area due to the number of soldering stations that can possibly be in use at different points in time, so you are asked to <strong>refrain</strong> from bringing any lead percentage version of solder into these areas.</p>
+<h2 id="computer-and-network-recommendations">Computer and Network Recommendations</h2>
+<ul>
+<li>For KiCad:<ul>
+<li>PC or Mac with at least 5 GB free hard drive space, 8Gb RAM, Intel i5 or better.</li>
+</ul>
+</li>
+<li>For Cadence:<ul>
+<li>PC or Mac (via Boot Camp/Parallels/etc.) with at least 25 GB free hard drive space, running Windows 10 (64-bit) Professional (not Starter or Home Basic) or higher</li>
+<li>Recommended: Intel CoreTM i7 4.30 GHz or AMD Ryzen 7 4.30 GHz with at least 4 cores, 16 GB RAM, 50 GB free disk space, 1920 x 1200 display resolution. Full list of recommended specifications.</li>
+</ul>
+</li>
+<li>Reliable broadband Internet connection (e.g., 4G, 5G, Cable, Fiber, etc)</li>
+</ul>
+<!--
+
+## Course Learning Outcomes
+
+Upon successful completion of this course, you should be able to:
+
+### Engineering Problem Solving (ABET 1)
+
+1.  Design with and use a microcontroller
+
+2.  Design, build, test, and debug a printed circuit board
+
+3.  Design, program in C/C++, test, and debug embedded software
+
+4.  Interface with an embedded system wirelessly
+
+### User Centered Design (ABET 2)
+
+1.  Develop design concepts based on specifications
+
+2.  Critique the design of an embedded system
+
+### Communication (ABET 3)
+
+1.  Demonstrate the ability to present technical material orally
+
+2.  Demonstrate the ability to present technical material in writing
+
+### Professional Context (ABET 4)
+
+3.  Describe the impact of embedded system on society
+
+### Multidisciplinary Teamwork (ABET 5)
+
+4.  Demonstrate the ability to function in a team
+
+5.  Use collaboration technology to work in a team
+
+6.  Create a block diagram of an embedded system
+
+### Critical Thinking & Decision Making (ABET 6)
+
+7.  Select and use sensors and actuators in an embedded system
+
+### Strategic Learning (ABET 7)
+
+8.  Identify and find information necessary to design an embedded system
+
+-->
+
+<h2 id="course-learning-outcomes">Course Learning Outcomes</h2>
+<p>Upon successful completion of this course, you should be able to:</p>
+<ol>
+<li>(ABET 1 -- Engineering Problem Solving) Select and use sensors and actuators in an embedded system</li>
+<li>(ABET 1 -- Engineering Problem Solving) Choose and design with a microcontroller</li>
+<li>(ABET 1 -- Engineering Problem Solving) Design, build, test, and debug a printed circuit board</li>
+<li>(ABET 1 -- Engineering Problem Solving) Design, program in C/C++, test, and debug embedded systems software</li>
+<li>(ABET 1 -- Engineering Problem Solving) Communicate between multiple chips or devices</li>
+<li>(ABET 1 -- Engineering Problem Solving) Use hardware or software interrupts in an embedded system</li>
+<li>(ABET 1 -- Engineering Problem Solving) Interface with an embedded system wirelessly</li>
+<li>(ABET 2 -- User Centered Design) Develop design concepts based on specifications</li>
+<li>(ABET 2 -- User Centered Design) Critique the design of an embedded system</li>
+<li>(ABET 3 -- Communication) Demonstrate the ability to present technical material orally</li>
+<li>(ABET 3 -- Communication) Demonstrate the ability to present technical material in writing</li>
+<li>(ABET 4 -- Professional Context) Describe the impact of embedded system on society</li>
+<li>(ABET 5 -- Multidisciplinary Teamwork) Demonstrate the ability to function in a team</li>
+<li>(ABET 5 -- Multidisciplinary Teamwork) Use collaboration technology to work in a team</li>
+<li>(ABET 5 -- Multidisciplinary Teamwork) Create a block diagram of an embedded system</li>
+<li>(ABET 6 -- Critical Thinking &amp; Decision Making) Test and demonstrate embedded system components and system functionality</li>
+<li>(ABET 7 -- Strategic Learning)  Identify and find information necessary to design an embedded system</li>
+</ol>
+<h2 id="workspaces">Workspaces</h2>
+<p>It is your responsibility to maintain a clean and orderly classroom and lab space. Our resources are finite and your ability to complete your work may be impacted by the actions of others. If you see someone disrespecting the space, please reach out to the instructors and <em>copy</em> <a href="mailto:scott.bainbridge@asu.edu">Scott Bainbridge</a>. <em>Failure to respect the lab space may result in loss of lab privileges.</em></p>
+<p>If you see a workstation where tools, probes, or material are non-functioning, please email <a href="mailto:scott.bainbridge@asu.edu">Scott Bainbridge</a> and <em>copy</em> the instructors.</p>
+<ul>
+<li>
+<p><a href="https://maps.asu.edu/?id=120&amp;mrkIid=62709">Peralta Hall</a>, Room 103 (<a href="http://links.asu.edu/peralta">Peralta Engineering Studios</a>) is our primary workspace with electronic components and test equipment. It is available for use while other classes are in session with permission from the instructor.</p>
+<blockquote>
+<p><strong>Note:</strong> Closed-toe shoes are mandatory in Peralta Studios at all times. Do not wear flip-flops or sandals to class. You are also required to wear safety glasses when operating specific tools such as soldering irons.</p>
+</blockquote>
+<p><strong>Lab Manager:</strong> <a href="mailto:scott.bainbridge@asu.edu">Scott Bainbridge</a></p>
+</li>
+<li>
+<p><a href="https://maps.asu.edu/?id=120&amp;mrkIid=62709">Peralta Hall</a>, Room 109 (<a href="http://links.asu.edu/peralta">Peralta Engineering Studios</a>)(<a href="https://peraltastudios.engineering.asu.edu">Hours</a>) has a printed circuit board manufacturing line. It is available during the day and selected evenings and weekends.</p>
+</li>
+</ul>
+<p><strong>Lab Manager:</strong> <a href="mailto:scott.bainbridge@asu.edu">Scott Bainbridge</a>.</p>
+<ul>
+<li>The <a href="https://poly.engineering.asu.edu/research/innovationhub/">Innovation Hub</a> (<a href="https://maps.asu.edu/?id=120&amp;mrkIid=62734">Technology Center</a>, Room 199, <a href="https://poly.engineering.asu.edu/research/innovationhub/">hours</a>) has a variety of prototyping equipment, including a Shop Bot (2-D wood router), laser cutter and engraver, 3D printer, 3D scanner, vinyl cutter, sewing machines, vacuum former (useful for creating project enclosures), and more.</li>
+<li>The <a href="https://maps.asu.edu/?id=120&amp;mrkIid=62727">Simulator Building</a> has a machining and manufacturing center with CNC mills and lathes, a welding room, and fiberglassing equipment.</li>
+<li>The <a href="https://maps.asu.edu/?id=120&amp;mrkIid=63247">Polytechnic Campus Library</a> has small group meeting rooms with whiteboards and is <a href="https://lib.asu.edu/hours">open late</a>.</li>
+</ul>
+<h2 id="community-values">Community Values</h2>
+<ul>
+<li>We engage in the process of innovation.</li>
+<li>We help each other become better.</li>
+<li>We identify needs and recognize design opportunities.</li>
+<li>We follow an engineering design process.</li>
+<li>We are creative - you have the license to "think outside the box".</li>
+<li>We fail early and often but keep going.</li>
+<li>We take risks, as engineering design involves LOTS of iteration.</li>
+<li>We build on each other's ideas and strengths in our design community.</li>
+<li>We contribute to our teams.</li>
+<li>We are comfortable with ambiguity.</li>
+<li>We make convincing arguments based on sound technical principles for why a solution meets a need.</li>
+<li>We communicate and document in multiple ways - orally, visually, interpersonally, written, in person and virtually.</li>
+</ul>
+<h2 id="professionalism">Professionalism</h2>
+<blockquote>
+<p>This course is welcome to individuals of all visible and nonvisible differences. All members of this class are expected to contribute to a respectful, welcoming and inclusive environment for every other member of the class.</p>
+</blockquote>
+<p>Each member of the course is expected to demonstrate professionalism, with regard to the respect you show the people around you, the resources provided, and the physical space. This applies to conduct in the classroom, office hours, and in ASU Lab spaces.</p>
+<p>Professionalism is required in all communication related to this course, including in-class discussions, presentations, canvas discussion board posts, and e-mail. We will not reply to rude or unprofessional emails.</p>
+<h2 id="attendance">Attendance</h2>
+<blockquote>
+<p>On-time attendance and participation in class activities is an essential part of the learning process, and students are expected to attend class regularly.  Irregular attendance typically results in poor or mediocre performance.</p>
+</blockquote>
+<p>Attendance will be taken at the start of each class, and may be administered via online link, class photo, or form.  </p>
+<blockquote>
+<p>If you are not physically present at the time attendance is taken, <strong><em>you will not be counted as present for that class session</em></strong>.</p>
+</blockquote>
+<p>You may miss up to <strong>3</strong> class sessions without penalty. Beginning with your fourth absence, <strong>you will lose 20% of your attendance grade</strong>.  If you have any concerns, please see the instructor.  You will be provided with a link to check your attendance on Canvas.</p>
+<p>Some absences are, however, unavoidable. Excused absences for classes (with prior notification to your professor) will be given without penalty to the grade in the case of:</p>
+<ol>
+<li>A university-sanctioned event [<a href="https://www.asu.edu/aad/manuals/acd/acd304-02.html">ACD 304--02</a>]</li>
+<li>Religious holidays [<a href="https://www.asu.edu/aad/manuals/acd/acd304-04.html">ACD 304--04</a>; a list can be found here <a href="https://eoss.asu.edu/cora/holidays">https://eoss.asu.edu/cora/holidays</a> ]</li>
+<li>Work performed in the line-of-duty according [<a href="https://www.asu.edu/aad/manuals/ssm/ssm201-18.html">SSM 201--18</a>]</li>
+<li>Illness, quarantine or self-isolation related to illness as documented by a health professional.</li>
+</ol>
+<h2 id="course-expectations">Course Expectations</h2>
+<ul>
+<li><strong>Active participation in and technical contribution to your team is required.</strong> Students with concerns about the participation or contributions of a team member can nominate them for a "pink slip" by emailing the professor during one of the team evaluation weeks (see the course calendar on <a href="https://canvas.asu.edu/">Canvas</a>). At the professor's discretion, a pink slip will be issued or the student removed from their team. Students who receive a pink slip must meet virtually with their professor to determine a remediation plan, which must be completed by a professor-determined deadline in order to remain on their team. Students who receive a pink slip will also receive an Academic Status Report. Students who are removed from their team must complete the semester project alone.</li>
+<li><strong>This is a time-intensive class that requires significant work outside of scheduled class meeting times. Plan on spending <em>at least</em> 6 -- 8 hours per week outside of scheduled class sessions.</strong> If you cannot make this commitment, please see your professor.</li>
+<li>Please preface the subject line of all emails to professors or course staff with [ESD].</li>
+<li>If your success in this class is in question, please see your professor. The sooner you do, the more likely we will be able to find a resolution.</li>
+<li>Embedded Systems Design Project class time is for Embedded Systems Design Project class work <em>only</em>.</li>
+</ul>
+<h2 id="deliverables">Deliverables</h2>
+<p>This course will consist of individual in-class work, homework assignments, and team assignments. A current schedule of deliverables is available in the calendar on <a href="https://canvas.asu.edu">Canvas</a>. All deliverables are due at 11:59 PM on the due date unless otherwise specified. <strong>It is the responsibility of your team members to check whether each of your Canvas submissions were successful. We recommend that you take a screenshot of each successful submission to provide evidence in case the submission goes awry. If you are unable to submit to Canvas due to a system outage, email the submission to your instructor before the assignment deadline.</strong></p>
+<p>Please follow the instructions in the <a href="/3x4/submission-best-practices/">Document Submission Best Practices</a> document for detailed information on how to submit files in this class.</p>
+<p>Many assignments impact subsequent ones and/or are reviewed multiple times as part of the "checkpoint" process (see below). It is therefore in the students' best interests to seek out advice and guidance from the teaching team, including instructors, TA's and graders. <em>Not all teaching team members will give the same advice, however</em>. We thus recommend obtaining <strong><em>multiple points of view</em></strong>. It is the responsibility of the student to seek out that advice and implement a solution that addresses the feedback received.</p>
+<h3 id="individual-deliverables">Individual Deliverables</h3>
+<ol>
+<li><strong>In-Class Labs</strong> -- Throughout the semester, there will be in-class activities to help you learn critical knowledge and skills for your project.</li>
+<li><strong>Individual Homework Assignments</strong> -- Throughout the semester, you will develop and demonstrate content knowledge on specific technical topics. This will culminate in you individually designing, building, testing, and demonstrating an acceptable subsystem, for use in your team's project.</li>
+<li><strong>Team Member Effectiveness Surveys</strong> -- A portion of your grade will be based on peer evaluations. You must complete this survey in both the middle and end of the semester to evaluate the effectiveness of and provide constructive feedback to your team.</li>
+</ol>
+<h3 id="team-deliverables">Team Deliverables</h3>
+<ol>
+<li><strong>Team Design Workflow Homeworks -</strong> These assignments will lead your team through a semester-long customer discovery and design process. Draft assignments will be checked off in class for feedback, submitted to Canvas for a grade, <em>and</em> deposited into your living report document (described below) for grading at each checkpoint.</li>
+<li><strong>Team presentations,</strong> reviewed in depth by faculty members, course staff, project stakeholders, industry representatives(TBD), past students, and your classmates.</li>
+<li><strong>Living Project Report</strong> -- This report will document your team's progress through the embedded system design process. They will include all team homeworks, and the checkpoint will provide a mechanism for instructors to give more detailed and in-depth feedback than during initial in-class homework checkoffs. Team documents will be reviewed at each checkpoint, requiring them to stay up-to-date.</li>
+<li><strong>Updated team repository,</strong> containing the latest versions of team assignments in the living project report, in addition to supporting files, appendices, and collected information. <strong>Must be electronic</strong> on Github.
+     <!--    Google Drive (<a href="http://drive.google.com">http://drive.google.com</a>)--></li>
+<li><strong>Stand Ups</strong> -- on selected days, one member from each team will stand up and share a 1-minute team progress report.</li>
+</ol>
+<h3 id="project-checkpoints">Project Checkpoints</h3>
+<p>There will be two major project checkpoints throughout the semester for presenting your work and receiving more detailed oral and/or written feedback.  These checkpoints will blend individual and team deliverables; this is spelled out in Canvas</p>
+<ul>
+<li>Your team will be required to present on an up-to-date snapshot of their team report.  </li>
+<li>Students will individually be required to present on their up-to-date individual subsystem design.</li>
+</ul>
+<h3 id="initial-draft-assignments">Initial-Draft Assignments</h3>
+<p>The purpose of initial assignments (low-point-value first submissions of team assignments) is to ensure students and teams stay on schedule, and have their documentation prepared early enough to obtain feedback from the teaching team. If the assignments are incomplete, it is impossible for the teaching team to deliver high-quality feedback that can be acted upon for project checkpoints.</p>
+<!-- Therefore, incomplete draft assignments will be graded on a complete / incomplete basis. Complete submissions will receive 100% of the available points. Incomplete submissions will receive 0%. It will remain at the instructor's discretion to award partial credit in extraordinary circumstances. -->
+
+<h3 id="demonstrations">Demonstrations</h3>
+<p>Labs require in-class demonstrations in front of a teaching team member to verify system functionality. Individual demonstration items will be marked as complete or incomplete unless otherwise stated. No partial credit will be given.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>There will be no final exam.</li>
+<li>You will receive formative feedback on assignments throughout the semester.</li>
+<li>Team members who do not participate in a presentation or demonstration <strong>will not receive credit for it</strong>.</li>
+<li>Team members who do not lead the design on at least one acceptable embedded (hardware/software) subsystem (see Project Description) for their team's project <strong>will not receive credit</strong> for the project. This is an embedded systems design class, not a mechanical design class.</li>
+<li>There will be <strong>no opportunities for extra credit</strong>. Instead, please put your time into completing the regular assignments.</li>
+</ul>
+<h2 id="course-structure-assessment-and-grading-policies">Course Structure, Assessment, and Grading Policies</h2>
+<h3 id="list-of-assignments">List of Assignments</h3>
+<table>
+<thead>
+<tr>
+<th>Assignment</th>
+<th>Individual Points</th>
+<th>Team Points</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Office Hour Survey</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Team Organization</td>
+<td></td>
+<td>100</td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>set up individual github</td>
+<td>50</td>
+<td></td>
+<td>1.01</td>
+</tr>
+<tr>
+<td>hello-world (esp32)</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>pic-icsp</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>pic debugging</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>switching power supply</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>surface mount soldering</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>advanced serial communication</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Timers and Interrupts(pic)</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>OLED, Graphing, and Interaction</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>MQTT Communication</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Design Concept &amp; Ideation</td>
+<td></td>
+<td>200</td>
+<td>4.04</td>
+</tr>
+<tr>
+<td>Block Diagram</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Component Selection</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Subsystem Schematic</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>External Design Review</td>
+<td></td>
+<td>200</td>
+<td>4.04</td>
+</tr>
+<tr>
+<td>BOM &amp; Hardware Orders</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Subsystem PCB Design</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Block Diagram / Communication / State Design</td>
+<td></td>
+<td>200</td>
+<td>4.04</td>
+</tr>
+<tr>
+<td>Individual API Documentation, Implementation, Verification</td>
+<td>300</td>
+<td></td>
+<td>6.06</td>
+</tr>
+<tr>
+<td>Subsystem Hardware Verification</td>
+<td>300</td>
+<td></td>
+<td>6.06</td>
+</tr>
+<tr>
+<td>Software Implementation</td>
+<td>200</td>
+<td></td>
+<td>4.04</td>
+</tr>
+<tr>
+<td>Controller Design</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>HMI Design</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Web-Based Design</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Innovation Showcase Poster Submission</td>
+<td></td>
+<td>50</td>
+<td>1.01</td>
+</tr>
+<tr>
+<td>Innovation Showcase Information Submission</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Team Software/Communication Verification</td>
+<td></td>
+<td>300</td>
+<td>6.06</td>
+</tr>
+<tr>
+<td>Team Hardware Verification</td>
+<td></td>
+<td>300</td>
+<td>6.06</td>
+</tr>
+<tr>
+<td>Final Report</td>
+<td></td>
+<td>400</td>
+<td>8.08</td>
+</tr>
+<tr>
+<td>Final Demonstration</td>
+<td></td>
+<td>300</td>
+<td>6.06</td>
+</tr>
+<tr>
+<td>attendance</td>
+<td>400</td>
+<td></td>
+<td>8.08</td>
+</tr>
+<tr>
+<td>CATME I</td>
+<td>100</td>
+<td></td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>CATME II</td>
+<td>150</td>
+<td></td>
+<td>3.03</td>
+</tr>
+<tr>
+<td>Subtotal</td>
+<td>2900</td>
+<td>2050</td>
+<td></td>
+</tr>
+<tr>
+<td>Percentage of Total</td>
+<td>59</td>
+<td>41</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>4950</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="grading-policies">Grading Policies</h3>
+<ul>
+<li>Students must be present during team presentations and demonstrations in order to receive credit.</li>
+<li>Assignments that require a Canvas submission must be submitted to Canvas in order to receive credit.</li>
+<li>Assignments submitted incorrectly (e.g., incorrect file types, some required files missing) but that are still "gradeable" will lose 25% of the total points that the assignment is worth. Refer to the <a href="/3x4/submission-best-practices/">Document Submission Best Practices</a> document for detailed information.</li>
+</ul>
+<h4 id="grading-scale">Grading Scale</h4>
+<p>The grading scale for this course is as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Letter Grade</strong></th>
+<th><strong>Cutoff %</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A+</td>
+<td>97%</td>
+</tr>
+<tr>
+<td>A</td>
+<td>93%</td>
+</tr>
+<tr>
+<td>A-</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>B+</td>
+<td>87%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>83%</td>
+</tr>
+<tr>
+<td>B-</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>C+</td>
+<td>77%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>E</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Cutoffs may be lowered but will never be raised.</em></p>
+<h4 id="late-assignments">Late Assignments</h4>
+<p>Late assignments will be graded as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Late submission time (hours)</strong></th>
+<th><span class="arithmatex">\(f(a,c,t)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(t  \leq  0\)</span></td>
+<td><span class="arithmatex">\(a  -  c*0%\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(0 &lt; t  \leq  24\)</span></td>
+<td><span class="arithmatex">\(a  -  c*10%\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(24 &lt; t  \leq  48\)</span></td>
+<td><span class="arithmatex">\(a  -  c*25%\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(48 &lt; t  \leq  96\)</span></td>
+<td><span class="arithmatex">\(a  -  c*50%\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(96 &lt; t\)</span></td>
+<td><span class="arithmatex">\(a  -  c*100%\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>where <span class="arithmatex">\(f(a,c,t)\)</span> is the final assignment grade, <span class="arithmatex">\(a\)</span> is the raw assignment grade before any late penalty deduction, <span class="arithmatex">\(c\)</span> is the total number of points that the assignment is worth, and <span class="arithmatex">\(t\)</span> is the number of hours that an assignment was submitted after the submission deadline.</p>
+<ul>
+<li>Late demonstrations will be graded using the same equation above but excluding days with no office hours.</li>
+<li>The late policy does not apply to the following homework types:<ul>
+<li>CATME Submissions (due to the nature of the tool)</li>
+<li>Final Report Submissions (Team Website or Individual Datasheet)</li>
+<li>Final System Verification</li>
+<li>Final Report / Datasheet Submissions</li>
+</ul>
+</li>
+<li><strong>Absolutely no submissions will be accepted after 11:59 p.m. on Monday, December 8, 2025.</strong></li>
+</ul>
+<h4 id="general-grading-rubric">General Grading Rubric</h4>
+<p>Unless otherwise specified in assignments, we will use the following grading rubric:</p>
+<table>
+<thead>
+<tr>
+<th>Quality</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exceeds Expectations</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Above Expectations</td>
+<td>85</td>
+</tr>
+<tr>
+<td>Meets Expectations</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Below Expectations</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Does Not Meet Expectations</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Not Submitted</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-information">Additional Information</h2>
+<blockquote>
+<p><strong>Note:</strong>  Class sessions may be recorded, and recordings provided to enrolled students, instructors or instructional support personnel. If you have concerns about being recorded, please contact your professor.</p>
+</blockquote>
+<ul>
+<li>The campus provides a number of valuable resources to help you achieve both personal and academic success. These include:<ul>
+<li>Student Success and Writing Center - <a href="http://tutoring.asu.edu">http://tutoring.asu.edu</a> The Poly Tutoring &amp; Writing Center offers free academic support services to all ASU students. At the Poly Tutoring &amp; Writing Center, you will receive help in math, science, engineering, computer science, and writing. To book an appointment, please use <a href="https://tutoring.asu.edu/tutor-search">their website</a> or call 480-727-1452.</li>
+<li>Counseling Center - <a href="https://eoss.asu.edu/counseling">https://eoss.asu.edu/counseling</a></li>
+<li>Career &amp; Professional Development Services - <a href="https://eoss.asu.edu/cs">https://eoss.asu.edu/cs</a></li>
+<li>Other <a href="https://engineering.asu.edu/resources/">Student Resources</a> from the Ira A. Fulton Schools of Engineering</li>
+</ul>
+</li>
+<li>
+<p><strong>Academic Integrity.</strong> All engineering students are expected to adhere to the ASU Student Honor Code and the ASU academic integrity policy, which can be found at <a href="https://provost.asu.edu/academic-integrity/policy">https://provost.asu.edu/academic-integrity/policy</a>). Students are responsible for reviewing this policy and understanding each of the areas in which academic dishonesty can occur. If you have taken this course before, you may not reuse or submit any part of your previous assignments without the express written permission from the instructor.</p>
+<p>All student academic integrity violations are reported to the Fulton Schools of Engineering Academic Integrity Office (AIO). Withdrawing from this course will not absolve you of responsibility for an academic integrity violation and any sanctions that are applied. The AIO maintains a record of all violations and has access to academic integrity violations committed in all other ASU college/schools.</p>
+</li>
+<li>
+<p><strong>Generative AI.</strong> Use of generative AI is generally permitted within guidelines. Artificial intelligence (AI), including ChatGPT, are being used in workplaces all over the world to save time and improve outcomes by generating text, images, computer code, audio, or other media. Use of AI tools is generally welcome and encouraged in this class with proper disclosure of use as described in each assignment. AI tools might be employed to brainstorm, draft, edit, revise text and code. Any submitted course assignment not explicitly identified as having used generative AI will be assumed to be entirely your original work. Using AI tools to generate content without proper disclosure will be considered a violation of <a href="https://provost.asu.edu/academic-integrity/policy">ASU's academic integrity policy</a> and students may be sanctioned for confirmed, non-disclosed use. If at any point you have questions about what is permitted, contact the instructor to discuss <em>before</em> submitting work.</p>
+</li>
+<li><strong>Copyrighted Materials.</strong> The contents of this course, including lectures and other instructional materials, are copyrighted materials. Students may not share outside the class, including uploading, selling or distributing course content or notes taken during the conduct of the course. Any recordings of class sessions is authorized only for the use of students enrolled in this course during their enrollment in this course. Recordings and excerpts of recordings may not be distributed to others (see <a href="https://www.asu.edu/aad/manuals/acd/acd304-06.html">ACD 304--06</a>, "Commercial Note Taking Services" and ABOR Policy <a href="https://public.azregents.edu/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf">5-308 F.14</a> for more information).<ul>
+<li>You must refrain from uploading to any course shell, discussion board, or website used by the course instructor or other course forum, material that is not the student's original work, unless the students first comply with all applicable copyright laws; faculty members reserve the right to delete materials on the grounds of suspected copyright infringement.</li>
+</ul>
+</li>
+<li><strong>Policy Against Threatening Behavior.</strong> Per the Student Services Manual <a href="https://www.asu.edu/aad/manuals/ssm/ssm104-02.html">SSM 104-02</a><strong>,</strong> students, faculty, staff, and other individuals do not have an unqualified right of access to university grounds, property, or services. Interfering with the peaceful conduct of university-related business or activities or remaining on campus grounds after a request to leave may be considered a crime. All incidents and allegations of violent or threatening conduct by an ASU student (whether on- or off-campus) must be reported to the ASU Police Department (ASU PD) and the Office of the Dean of Students.</li>
+<li><strong>Disability Accommodations.</strong> Suitable accommodations are made for students having disabilities. Students needing accommodations must register with <a href="https://eoss.asu.edu/drc">Student Accessibility and Inclusive Learning Services</a> and provide documentation of that registration to the instructor. Students should communicate the need for an accommodation in sufficient time for it to be properly arranged. See <a href="https://www.asu.edu/aad/manuals/acd/acd304-08.html">ACD 304-08</a> Classroom and Testing Accommodations for Students with Disabilities.</li>
+<li><strong>Harassment and Sexual discrimination.</strong> Arizona State University is committed to providing an environment free of discrimination, harassment, or retaliation for the entire university community, including all students, faculty members, staff employees, and guests. ASU expressly prohibits discrimination, harassment, and retaliation by employees, students, contractors, or agents of the university based on any protected status: race, color, religion, sex, national origin, age, disability, veteran status, sexual orientation, gender identity, and genetic information.
+Title IX is a federal law that provides that no person be excluded on the basis of sex from participation in, be denied benefits of, or be subjected to discrimination under any education program or activity. Both Title IX and university policy make clear that sexual violence and harassment based on sex is prohibited. An individual who believes they have been subjected to sexual violence or harassed on the basis of sex can seek support, including counseling and academic support, from the university. If you or someone you know has been harassed on the basis of sex or sexually assaulted, you can find information and resources at <a href="https://sexualviolenceprevention.asu.edu/faqs">https://sexualviolenceprevention.asu.edu/faqs</a>.
+<strong>Mandated sexual harassment reporter:</strong> As mandated reporters, professors are obligated to report any information we become aware of regarding alleged acts of sexual discrimination, including sexual violence and dating violence. ASU Counseling Services, <a href="https://eoss.asu.edu/counseling">https://eoss.asu.edu/counseling</a>, is available if you wish to discuss any concerns confidentially and privately.</li>
+</ul>
+<p>* Any information in this syllabus (other than grading and absence policies) may be subject to change with advance notice.</p>
+<!--
+## Extra Stuff to Save
+
+-   The following items will be required in the event that the university returns to sync or fully remote learning during the semester:
+
+    -   Webcam and/or cell phone camera (for assignment demonstrations)
+
+    -   Headset/earbuds and microphone (either built-in or separate)
+
+## Computer and Network Requirements for All Students
+
+PC or Mac (via Boot Camp/Parallels/etc.) with at least 25 GB free hard drive space, running Windows 10 (64-bit) Professional (not Starter or Home Basic)
+
+Recommended: Intel CoreTM i7 4.30 GHz or AMD Ryzen 7 4.30 GHz with at least 4 cores, 16 GB RAM, 50 GB free disk space, 1920 x 1200 display resolution. Full list of recommended specifications.
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

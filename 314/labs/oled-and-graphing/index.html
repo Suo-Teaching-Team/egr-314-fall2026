@@ -1,0 +1,1111 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Lab: ESP32 and Graphing - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab: ESP32 and Graphing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parts Needed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demonstration of Proficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Submission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/labs/oled-and-graphing/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Lab: ESP32 and Graphing</h1>
+
+<p><strong><em>Individual Assignment</em></strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab, you will learn how to utilize the I2C module built into the ESP32 to control an OLED display with a simple state machine, which you will be able to use on your project.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>To learn and explore the functionality of the ESP32's built in I2C module</li>
+<li>To program the ESP32 using VSCode</li>
+<li>To have a working display that can be used on your semester project</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DZUFlnxssxw?si=1C33EcU9FcLi6Hbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<blockquote>
+<p>An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
+</blockquote>
+<h2 id="parts-needed">Parts Needed</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ESP32 Development Board</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Breadboard</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper wires</td>
+<td style="text-align: left;">~10</td>
+</tr>
+<tr>
+<td style="text-align: left;">USB Micro Cable</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">OLED Screen</td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="external-resources">External Resources</h2>
+<ul>
+<li>The <a href="https://embedded-systems-design.github.io/">Embedded Systems Resources</a> blog<ul>
+<li><a href="https://embedded-systems-design.github.io/vscode-setup/">VS Code Setup and Usage</a></li>
+<li><a href="https://embedded-systems-design.github.io/using-pymakr/">Using the Pymakr Extension in VSCode</a></li>
+<li><a href="https://embedded-systems-design.github.io/working-with-thonny/">Working with Thonny</a> tutorial</li>
+<li>other<ul>
+<li><a href="https://embedded-systems-design.github.io/egr314-software-stack">EGR314 Software Downloads</a></li>
+<li><a href="https://embedded-systems-design.github.io/tutorials/esp32/">ESP32 DevKit Resources</a></li>
+<li><a href="https://embedded-systems-design.github.io/esp32-installation-and-setup/">Installation instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RandomNerdTutorials<ul>
+<li><a href="https://randomnerdtutorials.com/micropython-programming-basics-esp32-esp8266/">Micropython and ESP32 Introduction</a></li>
+<li><a href="https://randomnerdtutorials.com/micropython-gpios-esp32-esp8266/">MicroPython GPIOs</a></li>
+<li><a href="https://randomnerdtutorials.com/esp32-esp8266-digital-inputs-digital-outputs-micropython/">MicroPython Inputs Outputs</a></li>
+<li><a href="https://randomnerdtutorials.com/esp32-esp8266-analog-readings-micropython/">MicroPython Analog Inputs</a></li>
+</ul>
+</li>
+<li>OLED Screen Information:<ul>
+<li><a href="https://www.amazon.com/Songhe-0-96-inch-I2C-Raspberry/dp/B085WCRS7C/">Amazon Purchase Link</a></li>
+<li>Micropython Framebuf package</li>
+<li>Micropython GFX Package</li>
+<li>Micropypthon SSD1306 Package</li>
+<li><a href="https://raw.githubusercontent.com/adafruit/micropython-adafruit-gfx/master/gfx.py">gfx.py source</a></li>
+</ul>
+</li>
+<li>Python resources<ul>
+<li><a href="https://learnpython.com/blog/define-function-python/">Defining Functions</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>
+<p>Clone the ESP32_Oled project to your local pc: <a href="https://github.com/embedded-systems-design/code_esp32_oled">https://github.com/embedded-systems-design/code_esp32_oled</a>.  Take a look inside.  </p>
+<ol>
+<li>Remember that <code>boot.py</code> and <code>main.py</code> are the two files that get run automatically</li>
+<li><code>import</code> loads other files and runs what's inside.</li>
+<li>what's inside <code>my_oled.py</code>?</li>
+<li>what pins are used for <code>SCL</code> and <code>SDA</code>?</li>
+</ol>
+</li>
+<li>
+<p>Wire up your OLED to your ESP32, using the pinouts you just discovered.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="esp-oled_bb.png" data-desc-position="bottom"><img alt="" src="esp-oled_bb.png"></a></p>
+<blockquote>
+<p><strong>Note:</strong> OLED image is not representative of actual module or pin order</p>
+</blockquote>
+</li>
+<li>
+<p>Go back to <code>main.py</code>.  At the bottom, create a while loop that continues forever:</p>
+<pre><code>while True:
+    pass
+</code></pre>
+<blockquote>
+<p><code>pass</code> simply is a line that means "do nothing". You always need something in a <code>while</code> loop, <code>for</code> loop or <code>if</code> statement.</p>
+</blockquote>
+</li>
+<li>
+<p>at the top of main.py, import the time library:</p>
+<pre><code>import time
+</code></pre>
+</li>
+<li>
+<p>add a pause inside your while loop:</p>
+<pre><code>while True:
+    pass
+    time.sleep(1)
+</code></pre>
+<blockquote>
+<p>Now that you have something in the while loop, you can comment out the <code>pass</code> statement</p>
+</blockquote>
+</li>
+<li>
+<p>Create an "state" variable that holds states.  Initialize it right before the while loop:</p>
+<pre><code>state = 0
+</code></pre>
+</li>
+<li>
+<p>Increment the state variable each time you go through the while loop.</p>
+<pre><code>state = state+1
+</code></pre>
+</li>
+<li>
+<p>Inside the while loop, after incrementing state, if state is equal to 4 or greater, reset it to zero.</p>
+</li>
+<li>
+<p>How do you know if it's working? print the current value of  <code>state</code> each time it cycles through <code>while</code> with <code>print(state)</code>.  Put it right below <code>while True:</code></p>
+</li>
+<li>
+<p>Inside the while loop, if the state is equal to zero, have your program perform the following action:</p>
+<pre><code>my_oled.print_text("test",0,0)
+</code></pre>
+</li>
+<li>
+<p>Inside the while loop, if the state is equal to one, have your program perform the following action:</p>
+<pre><code>my_oled.print_text("something else",0,0)
+</code></pre>
+</li>
+<li>
+<p>look at the <code>my_oled.py</code> file.  See what the <code>print_text()</code> function does.</p>
+<ul>
+<li>identify the <code>fill(0)</code> function.  What does the code say is happening?</li>
+<li>identify the <code>show()</code> command.  What does the code say is happening?</li>
+</ul>
+</li>
+<li>
+<p>Modify <code>my_oled.print_text("something else",0,0)</code> so the text prints on the bottom row of the OLED.</p>
+</li>
+<li>
+<p>Inside the while loop, if the state is equal to 2, have your program perform the following action:</p>
+<ol>
+<li>clear the screen</li>
+<li>draw a line</li>
+<li>show the screen</li>
+</ol>
+<blockquote>
+<p>to draw a line, try <code>my_oled.oled.line(0,0,10,10,1)</code></p>
+</blockquote>
+</li>
+<li>
+<p>Now, modify your code so that you draw a line from the bottom left of the screen to the top-right of the screen</p>
+</li>
+<li>
+<p>Inside the while loop, if the state is equal to 3, have your program perform the following action:</p>
+<ol>
+<li>clear the screen</li>
+<li>draw a filled rectangle</li>
+<li>show the screen</li>
+</ol>
+<blockquote>
+<p>to draw a filled rectangle, consider using the <code>my_oled.graphics.fill_rect(0,0,10,10,1)</code></p>
+</blockquote>
+</li>
+<li>
+<p>Now, modify your code so that you draw a filled rectangle that covers the bottom-right quadrant of the screen.</p>
+</li>
+<li>Finally, look in the <code>lib/gfx.py</code> module.  What other functions can you implement?</li>
+<li>(optional) look inside my_oled to see how <code>print_text()</code> was implemented.  How could you simplify your while loop by bringing your plotting functions inside the <code>my_oled.py</code> module?</li>
+</ol>
+<!--
+1. We need to install new ESP32 libraries.  This will be done by repeating the steps from the [last assignment](/314/314-ind-04-uart-mqtt-communication/), with updated code.
+    1. If you already cloned the [esp32 mqtt library](https://github.com/embedded-systems-design/code_esp32_mqtt), navigate to the folder, open it in Git Extensions, and pull the latest version 
+-->
+
+<!-- 
+    1. Open the "esp32_setup.py" code from the github repository.
+
+        1. Replace the wifi information (variable name "ssid" and "password") with your home router information if testing at home, if necessary, or keep it the same if working in Peralta 103.
+
+            config.ssid = 'photon'
+            config.wifi_pw = 'particle'
+
+        1. Run the code on your ESP32.
+
+        > *Note: Assuming your ESP32 has been freshly flashed with micropython, this will connect to the internet, download three libraries, and save them into the file space under the ```lib``` directory on the ESP32 for future use.* 
+-->
+
+<!-- 
+1. Clone the [esp32 mqtt library](https://github.com/embedded-systems-design/code_esp32_mqtt), navigate to the folder, open it in Git Extensions or VSCode, and pull the latest version.
+1. Create a file named "config.py" at the top of the project folder and paste in the following:
+
+        TEAM = 'EGR314/Team321/'
+        TOPIC_HB=TEAM+'heartbeat'
+        TOPIC_PUB = TEAM+'PUB'
+        #TOPIC_SUB = TEAM+'SUB'
+        TOPIC_SUB = 'EGR314/Instructor'
+        MQTT_SERVER = '52.25.206.167'
+        MQTT_USER='student'
+        MQTT_PASSWORD='egr3x4'
+        WIFI_SSID = 'photon'
+        WIFI_PASSWORD='particle'        
+
+    > **Note:** If you want to work from home, replace the wifi information(```WIFI_SSID``` and ```WIFI_PASSWORD```) with your home router information, or keep it the same if working in Peralta 103.
+
+1. Open "main.py" from the local github repository directory in your IDE$^1$
+    1. add a line after line 17 (```from config import *```)
+
+            import my_oled
+
+    1. note the two initially commented-out lines in your ```sub_cb(topic, msg, retained, qos)``` function, right after the ```print``` line:
+
+            # my_oled.print_data(msg)
+            # my_oled.plot_data(msg)
+
+1. open the file called "lib/gfx.py", paste in the contents from , and save to the esp32 in the ```lib``` directory.
+1. Reset the ESP32 by pressing the "en" pushbutton on the device. The device will connect to wifi and then the MQTT server you programmed.  Make sure it runs without error and logs an incoming message when something is published on the indicated MQTT topic.
+1. Connect Power, Ground, SCL, and SDA pins of the OLED, making sure the SCL/SDA pins indicated in "my_oled.py" are the same in your code.
+1. Open up lib/ssd1306.py on your esp32 and inspect the code, looking for the place where the ```text()``` function is defined.
+    1. inspect the arguments this function expects
+    1. implement the text function in your empty ```print_data```
+1. Let's learn about some of the functionality provided by ssd1306.py and the framebuf library
+
+    - ```oled.fill(0)``` will clear the screen.
+    - ```oled.text(string,x,y)``` prints a string variable or literal at position x,y on the screen. (0,0) is considered top left
+    - ```oled.show()``` will display once you have drawn everything
+
+1. Implement the text function in your empty ```print_data```.  See the demonstration of proficiency below for the expected display format. Example from class:
+
+        def print_data(msg):
+
+            # convert byte array to string
+            my_string = msg.decode('utf-8')
+            # split string by spaces
+            my_strings = my_string.split(" ")
+            # convert string to float
+            my_values = [float(item) for item in my_strings]
+
+            # clear screen
+            oled.fill(0)
+
+            # iterate through values
+            for ii,item in enumerate(my_values):
+                # print string on new line
+                oled.text(str(item), 0, 10*ii)
+
+            # show screen
+            oled.show()  
+
+    > Note the use of ```enumerate()``` which simplifies indexing logic. (added after class)
+
+1. uncomment the ```print_data()``` line in "async_mqtt_uart.py".
+
+1. Open up lib/gfx.py on your esp32 and inspect the code, looking for the place where the ```line()``` function is defined.
+
+    - ```graphics.line(x1,y1,x2,y2,1)``` will plot a line from (x1,y1) to (x2,y2).  (0,0) is considered top left, and the width of the screen is given in my_oled.py as ```oled_width = 128```, and ```oled_height = 64```.
+
+1. Implement the ```line``` function in your empty ```plot_data```. See the demonstration of proficiency below for the expected display format.
+    1. comment the ```print_data()``` line in "async_mqtt_uart.py" and uncomment the ```plot_data()``` line in "async_mqtt_uart.py". -->
+
+<h2 id="demonstration-of-proficiency">Demonstration of Proficiency</h2>
+<!-- TODO: UPDATE -->
+
+<p>Please be prepared to demonstrate</p>
+<ol>
+<li>Cycling through states 0,1,2,3 in the terminal</li>
+<li>Printing text on the top and bottom of the screen</li>
+<li>Drawing a line from the bottom left to the top right corner of the screen</li>
+<li>Drawing a filled rectangle in the bottom-right quadrant of the screen.</li>
+</ol>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p>No canvas submission is required</p>
+<h3 id="grading">Grading</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Demonstration 1</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Demonstration 2</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Demonstration 3</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Demonstration 4</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

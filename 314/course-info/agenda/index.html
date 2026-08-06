@@ -1,0 +1,1397 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Class Agenda - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monday-jan-13" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Class Agenda
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#monday-jan-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Jan 13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-jan-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Jan 15
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-jan-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Jan 22
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-jan-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Jan 27
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-jan-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Jan 29
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-feb-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Feb 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-feb-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Feb 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-feb-10-week-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Feb 10 (Week 5)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-feb-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Feb 12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-feb-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Feb 17
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-feb-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, Feb 19
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-feb-24-wednesday-feb-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, Feb 24 &amp; Wednesday, Feb 26
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-march-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, March 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-march-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, March 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-march-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, March 17
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-march-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, March 19
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-march-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, March 24
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-march-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, March 26
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-april-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday April 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#april-79-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      April 7,9, 14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-april-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, April 16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-april-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, April 21
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesday-april-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday, April 23
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monday-april-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday, April 28
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/course-info/agenda.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Class Agenda</h1>
+
+<h2 id="monday-jan-13">Monday, Jan 13</h2>
+<ul>
+<li><strong>Take attendance</strong></li>
+<li>Pass out new parts<ul>
+<li>Voltage regulator kit</li>
+<li>esp32</li>
+</ul>
+</li>
+<li>Syllabus</li>
+<li>word on scheduling</li>
+<li>Changes to the class<ul>
+<li>goal is to have more points on individual, move towards modular systems so that individuals have less influence on the success of the team<ul>
+<li>now 60/40 individual/team.</li>
+</ul>
+</li>
+<li>everyone does their own system</li>
+<li>whether or not they can officially join the team depends on individual checkoff</li>
+<li>fewer assignments</li>
+<li>less user needs at the front end</li>
+<li>two checkpoints, not three.</li>
+<li>new qr code attendance policy<ul>
+<li>supplemented with photos of the class for verification if needed.</li>
+</ul>
+</li>
+<li>no team PCB</li>
+<li>individual board can be mfgd on JLCPCB</li>
+<li>permit daughter boards in specific situations, see project description.</li>
+<li>still no RC servos</li>
+<li>balanced loads across teammates</li>
+<li>team focus is on software architecture, communication, and standards.</li>
+<li>individual contribution is on hardware and API implementation</li>
+<li>individual must conform to class and team standard.</li>
+<li>individual "datasheet" documenting how their board can be interfaced with by their team.</li>
+<li>from previous years, permission to use either ESP or PIC for low-level peripheral connections<ul>
+<li>permit using existing libraries</li>
+</ul>
+</li>
+<li>changed wording to "labs" from "In class checkoffs"<ul>
+<li>still expect to check off in class</li>
+<li>we have simplified labs from previous years, should be doaable if you come prepared.</li>
+<li>bring your issues, but don't start plugging in wires when you sit down; you won't get done.</li>
+</ul>
+</li>
+<li>small cadence assignments<ul>
+<li>draw a new symbol</li>
+<li>draw a new footprint</li>
+<li>draw a simple schematic</li>
+<li>create a simple PCB</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Project Description</li>
+<li>Course requirements<ul>
+<li>still no arduino</li>
+<li>still no PSOC</li>
+<li>still no RC Servos</li>
+<li>hasn't been fully updated, will release later.  Go by the project description for now</li>
+</ul>
+</li>
+<li>Living documents<ul>
+<li>many of our assignments have changed, along witht he project.  Please have patience as these can and will change, especially the new protocol stuff.</li>
+<li>We won't change what can't be changed, like pins, but we may change settings and software enabled stuff like prefix and suffix and timing requirments.</li>
+<li>ask questions on discussion board</li>
+</ul>
+</li>
+<li>
+<p>discussion board</p>
+<ul>
+<li>use it!</li>
+</ul>
+</li>
+<li>
+<p>Voltage regulator</p>
+<ul>
+<li>talk about pins and 3.3v settings</li>
+</ul>
+</li>
+<li>
+<p>Things to install: <a href="https://embedded-systems-design.github.io/egr314-software-stack/">https://embedded-systems-design.github.io/egr314-software-stack/</a></p>
+<ul>
+<li>mplabx</li>
+<li>VSCode<ul>
+<li>Pymakr preview</li>
+<li>git, git extensions or github client --&gt; use vscode this year.</li>
+<li>still need to install git?</li>
+</ul>
+</li>
+<li>cadence</li>
+<li>altium -- no official support this spring</li>
+</ul>
+</li>
+<li>Wednesday is ESP32 lab<ul>
+<li>walk through bootloader install</li>
+<li>walk through vscode and pymakr buttons</li>
+<li>show the result and how it should work</li>
+</ul>
+</li>
+<li><a href="https://embedded-systems-design.github.io/esp32-installation-and-setup/">https://embedded-systems-design.github.io/esp32-installation-and-setup/</a></li>
+<li><a href="https://embedded-systems-design.github.io/vscode-setup/">https://embedded-systems-design.github.io/vscode-setup/</a></li>
+</ul>
+<h2 id="wednesday-jan-15">Wednesday, Jan 15</h2>
+<ul>
+<li>pass out parts<ul>
+<li>pic18447q10</li>
+<li>snap programmer</li>
+<li>usb cable (if needed)</li>
+</ul>
+</li>
+<li>talk about static electricity</li>
+<li>remind people of the attendance policy and late homework policy.</li>
+<li>take attendance</li>
+<li>Resolve Teaming issues</li>
+<li>Review friday assignments</li>
+<li><a href="https://www.dropbox.com/scl/fi/wvwpl7a3z245bss8f0rpx/Git-Basics.pptx?rlkey=z154v0yfejg6eaotzm6hk4cs3&amp;st=losin47n&amp;dl=0">git basics mini-lecture</a></li>
+</ul>
+<hr>
+<ul>
+<li>In class lab:<ul>
+<li><a href="https://embedded-systems-design.github.io/using-pymakr/">https://embedded-systems-design.github.io/using-pymakr/</a></li>
+</ul>
+</li>
+</ul>
+<p>Gotchas:</p>
+<ul>
+<li>use a USB Micro data cable</li>
+</ul>
+<hr>
+<ul>
+<li>PIC programming demonstration</li>
+<li>programs to install<ul>
+<li>git, git extensions, kdiff3</li>
+<li>or github client</li>
+</ul>
+</li>
+<li>Git Resources<ul>
+<li><a href="https://embedded-systems-design.github.io/using-github-to-manage-project-files/">https://embedded-systems-design.github.io/using-github-to-manage-project-files/</a></li>
+<li><a href="https://embedded-systems-design.github.io/tutorials/about-version-control/">https://embedded-systems-design.github.io/tutorials/about-version-control/</a></li>
+</ul>
+</li>
+<li>Install MPLabX, MCC before next Wednesday</li>
+<li>preview: team concept generation assignment due next friday.</li>
+</ul>
+<h2 id="wednesday-jan-22">Wednesday, Jan 22</h2>
+<ul>
+<li>attendance</li>
+<li>moved lab to Monday</li>
+<li>we Will be picking our own PIC this spring</li>
+<li>peripherals do matter,  you will be picking soon.</li>
+<li>what's an LDL?</li>
+<li>Discuss office hours in class</li>
+<li>ugta meeting time</li>
+<li>posted some assignments</li>
+<li>updated project assignment</li>
+<li>no spaces in your folder structure!!</li>
+<li>selection tool</li>
+<li>github link</li>
+<li>selection tool to be posted.</li>
+</ul>
+<h2 id="monday-jan-27">Monday, Jan 27</h2>
+<ul>
+<li>Using the Github Website Template<ul>
+<li>markdown cheatsheet</li>
+<li>images, sizing</li>
+<li>files.  </li>
+<li>links</li>
+<li>headings</li>
+<li>bullet lists and numbered lists</li>
+<li>quote field</li>
+</ul>
+</li>
+<li>debugging overview -- lab 3 preview</li>
+<li>go through team concept generation assignment due Monday night</li>
+<li>no links to Google docs</li>
+<li>submit PDF to canvas</li>
+</ul>
+<h2 id="wednesday-jan-29">Wednesday, Jan 29</h2>
+<ul>
+<li>Walk through parts distribution for surface mount soldering / Switching Power Supply</li>
+<li>Attendance</li>
+<li>Block Diagram Due Friday</li>
+<li>Component Selection Released - Go over</li>
+<li>Walk through tables in markdown</li>
+<li>Debugging Lab</li>
+</ul>
+<h2 id="monday-feb-3">Monday, Feb 3</h2>
+<ul>
+<li>Attendance</li>
+<li>Announcements<ul>
+<li>This is the week to solicit feedback from the instructors about parts selection and project concept!</li>
+<li>Cadence link is now available in Canvas --&gt; pages</li>
+<li>Concept Generation Grading</li>
+<li>Website clarification -- see announcement and follow up explanation:<a href="https://canvas.asu.edu/courses/207459/discussion_topics/6283173">https://canvas.asu.edu/courses/207459/discussion_topics/6283173</a></li>
+</ul>
+</li>
+<li>Continue reviewing project description &amp; project requirements document</li>
+<li>Lecture: Create Messaging Protocol: <a href="https://www.dropbox.com/scl/fi/e4jec3opauc0kxooictwy/messaging-protocol-in-c.html?rlkey=536hb66s9z4jmbuck9i48xrpq&amp;st=ub4db1b7&amp;dl=0">https://www.dropbox.com/scl/fi/e4jec3opauc0kxooictwy/messaging-protocol-in-c.html?rlkey=536hb66s9z4jmbuck9i48xrpq&amp;st=ub4db1b7&amp;dl=0</a></li>
+<li>surface mount soldering lab</li>
+<li>switching regulator walkthrough</li>
+</ul>
+<h2 id="wednesday-feb-5">Wednesday, Feb 5</h2>
+<ul>
+<li>Serial Communication Lecture: <a href="https://www.dropbox.com/scl/fi/pgetfj7qn1xksz3riu3sl/Serial-Communication.pptx?rlkey=3beddm5g8cg7yzivt1tt6npqh&amp;st=tzoykio4&amp;dl=0">https://www.dropbox.com/scl/fi/pgetfj7qn1xksz3riu3sl/Serial-Communication.pptx?rlkey=3beddm5g8cg7yzivt1tt6npqh&amp;st=tzoykio4&amp;dl=0</a></li>
+</ul>
+<h2 id="monday-feb-10-week-5">Monday, Feb 10 (Week 5)</h2>
+<ul>
+<li>Attendance</li>
+<li>
+<p>Announcements</p>
+<ul>
+<li>Advanced Serial Commuincation Lab Updates</li>
+<li>Great infomation and colaboration occuring on the discussion board</li>
+<li>Cadences Walk through on Wednesday</li>
+<li>Highlight other up coming assignments</li>
+</ul>
+</li>
+<li>
+<p>Mini-Lecture: Create Messaging Protocol: <a href="https://www.dropbox.com/scl/fi/e4jec3opauc0kxooictwy/messaging-protocol-in-c.html?rlkey=536hb66s9z4jmbuck9i48xrpq&amp;st=ub4db1b7&amp;dl=0">https://www.dropbox.com/scl/fi/e4jec3opauc0kxooictwy/messaging-protocol-in-c.html?rlkey=536hb66s9z4jmbuck9i48xrpq&amp;st=ub4db1b7&amp;dl=0</a></p>
+</li>
+</ul>
+<h2 id="wednesday-feb-12">Wednesday, Feb 12</h2>
+<ul>
+<li>Attendance</li>
+<li>Announcements<ul>
+<li>TBD</li>
+</ul>
+</li>
+<li>Example:</li>
+</ul>
+<h2 id="monday-feb-17">Monday, Feb 17</h2>
+<ul>
+<li>"Mini"-Lecture: Cadences Walkthrough<ul>
+<li>Schmatics</li>
+<li>Symbols</li>
+<li>Footprints</li>
+<li>Pads</li>
+</ul>
+</li>
+<li>go over calendar</li>
+<li>discuss design review</li>
+<li>discuss upcoming labs and changes.</li>
+</ul>
+<h2 id="wednesday-feb-19">Wednesday, Feb 19</h2>
+<ul>
+<li>Attendance -- has a special question today.</li>
+<li>esp32 walkthrough: <a href="https://embedded-systems-design.github.io/s3-module-info/">https://embedded-systems-design.github.io/s3-module-info/</a></li>
+<li>OLED assignment walkthrough &amp; demonstration</li>
+<li>advanced serial checkoff</li>
+</ul>
+<h2 id="monday-feb-24-wednesday-feb-26">Monday, Feb 24 &amp; Wednesday, Feb 26</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../agenda.png" data-desc-position="bottom"><img alt="Link to This Page" src="../agenda.png"></a></p>
+<ul>
+<li>Student Reviewer Forms<ul>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScB7b5_bSJzvLsn2bzXh6oHZNwpCO06MVF65ACQrqAWmT5SMg/viewform?usp=dialog">Student Reviewer 1 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd052sloTc4kpD9BOqe2ZBj7IN8JbUjQjP6kvq-tdpzRJrPmg/viewform?usp=dialog">Student Reviewer 2 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_ncQnvY-MlqQfHYlPnlt_hrO5K9tkHi4ToWw-m2fkS5q07w/viewform?usp=dialog">Student Reviewer 3 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScanwLq3oqdwsq-9xOG3CN7awRs3q1jZsbc3q-GJ2IfXfMqag/viewform?usp=dialog">Student Reviewer 4 Form</a></li>
+</ul>
+</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeLQ2Mn9p_EcPVHOEL3FSkHukL86Oq_O8KXb2ENP2l6fmt-uw/viewform?usp=sf_link">External Reviewer Form</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/11q20p3GmVmdCZFVk45ZYly4BWL2F7rf0dd64sWr-Nkc/edit?gid=0#gid=0">Github Sites</a></li>
+</ul>
+<h2 id="monday-march-3">Monday, March 3</h2>
+<ul>
+<li>OLED lab</li>
+</ul>
+<h2 id="wednesday-march-5">Wednesday, March 5</h2>
+<ul>
+<li>PCB design due Friday -- sorry that it wasn't posted....no one noticed that we were talking about somethign being due without an assignment?<ul>
+<li>Changes nothing, really...still have to get it done.  But first we have to fix our schematic.</li>
+</ul>
+</li>
+<li>Reviewing  your Individual design review materials<ul>
+<li>Schematic feedback back for AM section</li>
+<li>Almost back for PM section.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>If you have changes, you will want to implement those changes, because they may lead to design / part changes</p>
+</blockquote>
+<p></p>
+
+<ul>
+<li>If you don't understand comments, please come see me or someone on the teaching team.<ul>
+<li>Cannot help everyone now, but office hours is</li>
+</ul>
+</li>
+<li>Finish PCB design tutorial<ul>
+<li>PCB design</li>
+<li>DRC</li>
+<li>Exporting for manufacturing</li>
+<li>Ground / Power planes, Rubouts, Differential Pairs</li>
+</ul>
+</li>
+<li>Finish messaging tutorial after ring buffer<ul>
+<li>Mini-Lecture: Create Messaging Protocol: <a href="https://www.dropbox.com/scl/fo/qiensph7fmhyvffwqx0tg/AJ7JBq08ozi2DakbRGIdvwM?rlkey=gkigp1impu8skg114lpozcffw&amp;st=exjxy9qs&amp;dl=0">https://www.dropbox.com/scl/fo/qiensph7fmhyvffwqx0tg/AJ7JBq08ozi2DakbRGIdvwM?rlkey=gkigp1impu8skg114lpozcffw&amp;st=exjxy9qs&amp;dl=0</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="monday-march-17">Monday, March 17</h2>
+<ul>
+<li>Timers and Interrupts Walkthrough<ul>
+<li>Walkthrough of breadboard image and power issues</li>
+</ul>
+</li>
+<li>Message Compliance Verification<ul>
+<li>Submission is Friday</li>
+<li>Checkoff is next Friday</li>
+<li>can be done on breadboard</li>
+</ul>
+</li>
+<li>Hardware / Subsystem Verification is due April 4<ul>
+<li>On your actual PCB</li>
+</ul>
+</li>
+<li>Finish Protocol Lecture Walkthrough<ul>
+<li>ESP32 walkthrough on Monday</li>
+<li>slides <a href="https://www.dropbox.com/scl/fi/pgetfj7qn1xksz3riu3sl/Serial-Communication.pptx?rlkey=3beddm5g8cg7yzivt1tt6npqh&amp;st=tzoykio4&amp;dl=0">https://www.dropbox.com/scl/fi/pgetfj7qn1xksz3riu3sl/Serial-Communication.pptx?rlkey=3beddm5g8cg7yzivt1tt6npqh&amp;st=tzoykio4&amp;dl=0</a></li>
+</ul>
+</li>
+<li>Status of Orders<ul>
+<li>Backorders - need to respond</li>
+<li>PIC18F47Q10 - order the /E variant instead of the /I variant, as it is in stock</li>
+<li>PCBs were ordered</li>
+<li>Peralta for now.</li>
+</ul>
+</li>
+</ul>
+<h2 id="wednesday-march-19">Wednesday, March 19</h2>
+<ul>
+<li>Timers and Interrupts checkoffs</li>
+<li>(Aukes) Discuss checkoff</li>
+</ul>
+<h2 id="monday-march-24">Monday, March 24</h2>
+<ul>
+<li>Check in on your parts order -- you should have been copied on the approval, and you should have gotten confirmation from Poly business office</li>
+<li>PCB orders -- All orders from Dr. Nichols up through Monday, March 11 were sent to JLCPCB and most have already been distributed</li>
+<li>Messaging protocol lectures: <a href="https://www.dropbox.com/scl/fo/qiensph7fmhyvffwqx0tg/AJ7JBq08ozi2DakbRGIdvwM?rlkey=gkigp1impu8skg114lpozcffw&amp;st=exjxy9qs&amp;dl=0">https://www.dropbox.com/scl/fo/qiensph7fmhyvffwqx0tg/AJ7JBq08ozi2DakbRGIdvwM?rlkey=gkigp1impu8skg114lpozcffw&amp;st=exjxy9qs&amp;dl=0</a><ul>
+<li>Focused on lecture4.html -- working with micropython, strings, and asyncio</li>
+</ul>
+</li>
+<li>new github repository with example code: <a href="https://github.com/embedded-systems-design/code_protocol">https://github.com/embedded-systems-design/code_protocol</a></li>
+</ul>
+<h2 id="wednesday-march-26">Wednesday, March 26</h2>
+<ul>
+<li>Show off hardware working with shared code<ul>
+<li>for every heartbeat message, I get five debug messages back.  These will eventually need to be commented out</li>
+</ul>
+</li>
+<li>Serial Messaging Checkoff this Friday<ul>
+<li>I will craft ~5 messages, some that fit your protocol, some that don't</li>
+<li>I will ask you to send properly formatted messages of types you are supposed to send</li>
+<li>Not every part of the code is implemented.  What is not?  Broadcast, for example<ul>
+<li>prioritization of received messages</li>
+<li>message sending</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Answer questions<ul>
+<li>API -</li>
+</ul>
+</li>
+<li>MQTT checkoff<ul>
+<li>Remember to share ground to ESP, but not power</li>
+<li>remember to save config.py</li>
+<li>We have found Thonny file transfer to work better, use that if your code upload fails too much</li>
+</ul>
+</li>
+<li>MQTT</li>
+</ul>
+<h2 id="wednesday-april-2">Wednesday April 2</h2>
+<ul>
+<li>System verification<ul>
+<li>Review your block diagram assignment.</li>
+<li>Review the process diagram.</li>
+<li>There should be one message for at least one sensor. There should be a message that serves at least each motor.  Permits the motor to be driven at a particular speed. To a particular location.</li>
+<li>Your HMI should be able to send and receive data.</li>
+<li>MQTT should be able to send and receive data.</li>
+<li>Review the message table.</li>
+<li>Table mapping between who sends what messages and who receives those messages.</li>
+<li>Check for consistency in data type and length</li>
+<li>We will be checked three subsystems.<ul>
+<li>Sensor motor controller.</li>
+<li>HMI</li>
+<li>MQTT web server.</li>
+<li>We will also be checking for the percentage of messages that are supported.</li>
+</ul>
+</li>
+<li>Because it is important for each person on the team to meet the class specification, There is a points calculation each team needs to play in order to calculate the maximum number of points they could achieve.</li>
+<li>If one person on the team will cause the entire team to get zero messages passed, It's in the team's best interest to not penny that person to join the team for checkoff.</li>
+<li>In that case, the individual will have to check off directly with an instructor.  Teams will not get the points from the required subsystem</li>
+<li>In that case, also, the individual API will become very important as it is the documentation for the individual to check off.</li>
+<li>We will be needing two new charts.</li>
+<li>One is the controller diagram.</li>
+<li>The other is the software diagram.</li>
+</ul>
+</li>
+<li>Final demonstration.<ul>
+<li>We will be checking to make sure that you have Met the Course requirements.</li>
+<li>We will also be checking for quality of build and reliability.</li>
+<li>Quality of HMI.</li>
+<li>quality of interface. MQTT.</li>
+</ul>
+</li>
+</ul>
+<h2 id="april-79-14">April 7,9, 14</h2>
+<p>Focused on checkoffs</p>
+<h2 id="wednesday-april-16">Wednesday, April 16</h2>
+<ul>
+<li>feedback control slides: <a href="https://www.dropbox.com/scl/fi/rl5s00u897pukixttsuul/Feedback-Control.pptx?rlkey=ttt45at8iu8kpjwr92ok11kqk&amp;st=2xjy4c1h&amp;dl=0">https://www.dropbox.com/scl/fi/rl5s00u897pukixttsuul/Feedback-Control.pptx?rlkey=ttt45at8iu8kpjwr92ok11kqk&amp;st=2xjy4c1h&amp;dl=0</a></li>
+</ul>
+<h2 id="monday-april-21">Monday, April 21</h2>
+<ul>
+<li>Final Report assignment posted -- go through it</li>
+<li>Grades have been posted<ul>
+<li>External Design Review, Checkoffs</li>
+<li>Will add Schematic Feedback to External Design Review</li>
+<li>Team Design review will be back by Wednesday</li>
+<li>Attendance will be updated by Wednesday</li>
+<li>Please review your grades -- we all make mistakes, and are happy to review<ul>
+<li>I will re-review the whole assignment.  Points may go up or down.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Poster should have been submitted friday.</li>
+<li>Discussion of System Verification Assignment<ul>
+<li>Strategy for most points</li>
+<li>Signups for Wednesday checkoff</li>
+</ul>
+</li>
+<li>Request for Information -- Please respond directly.</li>
+<li>Final Demonstration signups on Monday.</li>
+</ul>
+<h2 id="wednesday-april-23">Wednesday, April 23</h2>
+<ul>
+<li>Attendance Posted -- please review</li>
+<li>Course Evaluations -- important</li>
+<li>Innovation Showcase Signups -- on Canvas tomorrow.</li>
+<li>Grading Issues<ul>
+<li>Final Report -- It is your job to read feedback</li>
+<li>Design review grading -- many teams ignored feedback from first submission</li>
+</ul>
+</li>
+</ul>
+<h2 id="monday-april-28">Monday, April 28</h2>
+<ul>
+<li><a href="https://www.dropbox.com/scl/fi/9cjsk0d0vj07aon6r36o7/build-your-own-lab.pptx?rlkey=ujll2sf0ehbv2o7nio9y8rb18&amp;st=emgvxafl&amp;dl=0">https://www.dropbox.com/scl/fi/9cjsk0d0vj07aon6r36o7/build-your-own-lab.pptx?rlkey=ujll2sf0ehbv2o7nio9y8rb18&amp;st=emgvxafl&amp;dl=0</a></li>
+<li>System Checkoff Signup</li>
+<li>Updated Innovation Showcase Demonstration rubric -- updated points for qualitative look / feel</li>
+<li>Returned Grades<ul>
+<li>Feedback: Read the comments!</li>
+<li>Re-read the feedback from the first submission.</li>
+<li>PCB HW submit schemtaic if schematic missing</li>
+</ul>
+</li>
+<li>What should you be doing this week?<ul>
+<li>Finishing System Checkoff</li>
+<li>Getting your Demonstration looking and working good</li>
+</ul>
+</li>
+<li>Course evaulations: <a href="https://fultonapps.asu.edu/eval/">https://fultonapps.asu.edu/eval/</a><ul>
+<li>Five minute timer</li>
+</ul>
+</li>
+<li>UGTAs</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

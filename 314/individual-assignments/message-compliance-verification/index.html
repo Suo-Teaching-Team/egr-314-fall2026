@@ -1,0 +1,1002 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Message Compliance Verification - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Message Compliance Verification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-datasheet-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Datasheet Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency-not-required-spring-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Demonstration of Proficiency (not required Spring 2025)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Individual Demonstration of Proficiency (not required Spring 2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submission
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/individual-assignments/message-compliance-verification/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Message Compliance Verification</h1>
+
+<p><strong><em>Individual Assignment</em></strong></p>
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>An application programming interface (API) is a connection between computers or between computer programs. It is a type of software interface, offering a service to other pieces of software. A document or standard that describes how to build such a connection or interface is called an API specification. A computer system that meets this standard is said to implement or expose an API. The term API may refer either to the specification or to the implementation.
+</p>
+<p>- <a href="https://en.wikipedia.org/wiki/API">Wikipedia</a></p>
+</blockquote>
+<p>The purpose of this assignment is to verify that your subsystem meets the compatibility requirements for communicating with your team's system</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="/314/project-description/">Project Description</a></li>
+<li><a href="/314/project-description/protocol/">Protocol Specification</a></li>
+<li><a href="https://www.dropbox.com/scl/fi/e4jec3opauc0kxooictwy/messaging-protocol-in-c.html?rlkey=536hb66s9z4jmbuck9i48xrpq&amp;st=ub4db1b7&amp;dl=0">Mini-Lecture on Class Message / UART Protocol</a></li>
+<li><a href="https://www.dropbox.com/scl/fi/pgetfj7qn1xksz3riu3sl/Serial-Communication.pptx?rlkey=3beddm5g8cg7yzivt1tt6npqh&amp;st=tzoykio4&amp;dl=0">Serial Communication Lecture</a></li>
+</ul>
+<h2 id="preparation">Preparation</h2>
+<h3 id="individual-datasheet-update">Individual Datasheet Update</h3>
+<ol>
+<li>
+<p>Make a new page on your individual "datasheet" website called "API"</p>
+</li>
+<li>
+<p>From your team's "Block Diagram, Process Diagram, and Message Structure" assignment, identify the messages that you must send or receive and copy them to your datasheet.  This includes:</p>
+<ul>
+<li>messages you send to someone else (or broadcast to everyone)</li>
+<li>messages sent to you</li>
+<li>messages broadcast from someone else to the whole team that you will act on in some way.</li>
+</ul>
+</li>
+<li>
+<p>For each message, review the message table defined by your team in that team assignment.  Does it include all the data required to process that message?  Was something missed?</p>
+</li>
+<li>
+<p>For each message, expand the information provided.  Provide</p>
+<ul>
+<li>the number of bytes</li>
+<li>the data type (if you are using micropython, you must state/use the corresponding C data type)</li>
+<li>the variable name</li>
+<li>the smallest number you will recognize in your code (must be greater than or equal to the limits imposed by your data type)</li>
+<li>the largest number you will recognize in your code (must be less than or equal to the limits imposed by your data type)</li>
+<li>An example of valid message data</li>
+</ul>
+<blockquote>
+<p><strong>Reminder:</strong> You cannot just update your own message types in a vacuum.  This will require coordination from your teammates, and you will need to make sure the team report webpage is updated to match your necessary changes.  Any teammates that share message types will also have to ensure their message structures match yours.</p>
+</blockquote>
+<p>Example: Message Type 64 -- Motor Speed Setpoint</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">Byte 1</th>
+<th style="text-align: center;">Byte 2</th>
+<th style="text-align: center;">Byte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td style="text-align: center;"><code>message_type</code></td>
+<td style="text-align: center;"><code>motor_id</code></td>
+<td style="text-align: center;"><code>motor_speed</code></td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td style="text-align: center;"><code>uint8_t</code></td>
+<td style="text-align: center;"><code>uint8_t</code></td>
+<td style="text-align: center;"><code>int8_t</code></td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-100</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-30</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Clarification:</strong>  These messages fit INSIDE the class messaging protocol, in the "message data" area of each packet (bytes 4-61).  You DO NOT need to include the prefix, suffix, sender, or receiver in this table, as these are constant across the whole class.  Your messages fit INSIDE that <a href="/314/project-description/protocol/">specification</a>.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="handling-code">Handling Code</h3>
+<p>You will next need to implement and expand the Message Protocol examples shared in class and available in the <a href="#resources">resources</a> links above</p>
+<p>Your job will be to:</p>
+<ul>
+<li>Implement a message receiver that:<ul>
+<li>handles all messages sent in over the daisy chain UART network<ul>
+<li>passes on messages intended for someone else</li>
+<li>processes messages intended for you.</li>
+<li>trashes messages sent from yourself that have made it back to you</li>
+<li>ignores messages larger than your buffer size</li>
+</ul>
+</li>
+<li>anticipates and handles mal-formed messages by ignoring them.  For example:<ul>
+<li>ignores characters sent outside of a message frame</li>
+</ul>
+</li>
+<li>handles each message type intended for you<ul>
+<li>must provide a unique acknowledgement of the message and the data received, whenever a correctly-formatted message is received.</li>
+<li>This does not have to connect to your final system functionality yet, but should be differentiable based on the message type and message data received</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Implement a message sender that<ul>
+<li>sends an example of each message type, properly formatted, with time-varying data (can be valid data or "dummy" data for now).<ul>
+<li>easily modifyable based on the instructor's request (see below)</li>
+</ul>
+</li>
+<li>ensures that data you send is properly formatted<ul>
+<li>contains proper prefix and suffix</li>
+<li>is properly addressed by you, and properly addressed to someone on your team.</li>
+<li>ensures that message data does not contain message prefix and suffix codes.</li>
+<li>cannot send data that is longer than the specification.</li>
+<li>any other other reasonable formatting mistakes are prevented.</li>
+<li>prioritizes passing on messages received by you before sending your own messages.</li>
+<li>ensures a maximum rate of sending messages determined by a specified variable, and implemented using programming best practices, such as interrupts, timers, and non-blocking code.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="individual-demonstration-of-proficiency-not-required-spring-2025">Individual Demonstration of Proficiency (not required Spring 2025)</h2>
+<blockquote>
+<p>This part of the assignment has been deferred.  It will now be checked during the team system verification assignment.</p>
+</blockquote>
+<p>Checkoff will be completed in class over the course of several classes, and must be completed before you can officially join your team's system.</p>
+<blockquote>
+<p>Demonstrations may be completed through the date noted in Canvas. Your grade will be documented in a spreadsheet and later uploaded to the Canvas gradebook. Late demonstrations will be graded per the policy in the syllabus.</p>
+</blockquote>
+<ol>
+<li>You will plug both 8-pin ribbon cable connectors into your final PCB, (or a breadboard if it is not complete), matching the specification provided in the Project Description and Protocol Description documents.  The other end will be connected to an instructor's evaluation board to create a two-member daisy chain.</li>
+<li>You will provide a demonstration of each message received and how you handle it.</li>
+<li>Instructors will look at your API page and ask you to send a variety of commands based on your API, to various team members, to ensure you send messages that match the protocol.</li>
+<li>You will then walk instructors through a demonstration of sending the message asked for, and the instructors will check it for formatting and validity.</li>
+</ol>
+<h3 id="preparation_1">Preparation</h3>
+<p>Please prepare this assignment as a new "API" page on your github webpage (your individual "datasheet").</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Ensure your message types match your team's</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Ensure you have provided a full message specification for each message type, as described above</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Zip up your software and provide a link<ul>
+<li>In MPLabX, this can be done by right-clicking on your project name in the Projects window and select "Package".</li>
+</ul>
+</li>
+</ul>
+<p>Once completed,</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Create a link to this new page on your individual datasheet's main landing page.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Check all links to ensure that they work</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> export the new API page as a pdf</li>
+</ul>
+<blockquote>
+<p>Do not link to <em>living documents</em>, such as google docs, draw.io drawings, or google sheets.   Rather, contents the .pdf and .zip documents should be exported, saved in your repository, and hosted on the github site itself.</p>
+</blockquote>
+<h3 id="submission">Submission</h3>
+<p>To submit a complete assignment, please submit:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> A working URL to the new "API" page.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> the <strong>PDF of the API webpage</strong> for easier review</li>
+</ul>
+<p>Both items must be submitted, by the deadline in the Canvas course calendar, in order to receive full credit.  It is your responsibility to ensure that your submission to Canvas was successful. Late Canvas submissions will be graded per the policy in the syllabus.</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: right;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Initial Submission (completeness)</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Demonstration (percentage of messages handled correctly)</td>
+<td style="text-align: right;"><del>200</del></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong><del>300</del> 100</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

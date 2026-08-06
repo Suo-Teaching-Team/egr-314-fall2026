@@ -1,0 +1,1737 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../314/">
+      
+      
+        <link rel="next" href="../submission-best-practices/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>EGR 304/314 Course Sequence Requirements - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EGR 304/314 Course Sequence Requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../314/" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../314/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../314/syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../314/project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../314/project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#project-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-project-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Project Budget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecad-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-and-board-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components and Board Mounting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-printed-circuit-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Printed Circuit Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-board-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Board Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daughter-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daughter Boards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-microcontrollers-for-individual-homeworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Microcontrollers for Individual Homeworks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrupts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-analog-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Analog Sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-serial-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Serial Sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-actuators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Actuators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#project-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-project-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Project Budget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecad-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-and-board-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components and Board Mounting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-printed-circuit-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Printed Circuit Board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-board-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Board Dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daughter-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daughter Boards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-microcontrollers-for-individual-homeworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Microcontrollers for Individual Homeworks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrupts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Team Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-analog-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Analog Sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-serial-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Serial Sensors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permitted-actuators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permitted Actuators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/3x4/course-sequence-requirements.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>course sequence requirements</h1>
+
+<p><em>and Topic Coverage</em></p>
+<blockquote>
+<p>Note: All requirements are subject to change</p>
+</blockquote>
+<p>In addition to the engineering design specifications defined by your team, the design and fully-functioning prototype must meet the included below. <strong>Exceptions to requirements are only allowed with your professor's prior written approval.</strong> All projects developed by teams in the class will be demonstrated and graded live at the end of the semester.</p>
+<h2 id="project-requirements">Project Requirements</h2>
+<h3 id="maximum-project-budget">Maximum Project Budget</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$60/team member</td>
+<td>$60/team member</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note</em>: Does not include development kits, components or PCBs from PRLTA, components acquired for free, or components purchased out of pocket.</p>
+<h3 id="ecad-software">ECAD software</h3>
+<p>Each member of a team must use the same ECAD tool for team-based work.  This must be decided at the beginning of the semester, once teams are formed.</p>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kicad <em>or</em> Cadence</td>
+<td>Kicad <em>or</em> Cadence</td>
+</tr>
+</tbody>
+</table>
+<!-- \* Altium is not available on ASU owned equipment. -->
+
+<h3 id="components-and-board-mounting">Components and Board Mounting</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thru-hole <em>or</em> Surface Mount</td>
+<td>Surface Mount<span class="arithmatex">\(^1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(^1\)</span>: Surface-mount components are ALWAYS required for ICs, passive elements (resistors, capacitors, etc), and discrete active components (transistors, etc). For resistors and capacitors, size <a href="https://eepower.com/resistor-guide/resistor-standards-and-codes/resistor-sizes-and-packages/#">0805</a> or larger is recommended.  Mechanical connections to PCBs make terminal blocks, connectors, fuse terminals, etc, more robust and are permitted. Other exceptions are allowed with prior <em>written</em> approval from your professor.</p>
+<!--
+Transistor Technology 
+
+| 304           | 314           |
+| ------------- | ------------- |
+| not specified | not specified |
+-->
+
+<!--
+Digitally-switched actuator load minimum requirements[^8]
+
+| 304 | 314 |
+| --- | --- |
+|     |     |
+
+Analog Output  
+
+| 304 | 314 |
+| --- | --- |
+|     |     |
+-->
+
+<h3 id="programming-language">Programming Language</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C (MPLabX),</td>
+<td>C (MPLabX), MicroPython</td>
+</tr>
+</tbody>
+</table>
+<h3 id="final-printed-circuit-board">Final Printed Circuit Board</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Working board manufactured in Peralta</td>
+<td>Working board manufactured by Peralta or JLCPCB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maximum-board-dimensions">Maximum Board Dimensions</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100x100mm</td>
+<td>100x100mm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="daughter-boards">Daughter Boards</h3>
+<blockquote>
+<p>Daughter Boards are <strong>not permitted</strong> in EGR304.  <a href="https://www.technipages.com/what-is-a-daughterboard/">What is a daughterboard?</a></p>
+</blockquote>
+<p>Please see the 314 Project Description for info on what daughterboards are permitted.</p>
+<h3 id="required-microcontrollers-for-individual-homeworks">Required Microcontrollers for Individual Homeworks</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microchip PIC 18F57Q43 Curiosity Nano Development Board</td>
+<td>Microchip PIC 18F47Q10 &amp; ESP32</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interrupts">Interrupts</h3>
+<table>
+<thead>
+<tr>
+<th>304</th>
+<th>314</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>not required</td>
+<td>Interrupts (PIC) or Asyncio (Micropython)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="team-project">Team Project</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>304</strong></th>
+<th><strong>314</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team Composition</td>
+<td>instructor-selected</td>
+<td>self-selected</td>
+</tr>
+<tr>
+<td>Microcontroller Selection</td>
+<td>instructor-selected</td>
+<td>team-selected</td>
+</tr>
+<tr>
+<td>Breadboarding</td>
+<td>required</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Interrupts</td>
+<td>not introduced</td>
+<td>required</td>
+</tr>
+<tr>
+<td>Discussion Board</td>
+<td>Canvas Discussions</td>
+<td>Canvas Discussions</td>
+</tr>
+<tr>
+<td>Project Management: File sharing</td>
+<td>GitHub</td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td>Project Management: Reporting</td>
+<td>GitHub</td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td>Final Demonstration</td>
+<td>In-Class</td>
+<td>Innovation Showcase</td>
+</tr>
+</tbody>
+</table>
+<!--
+| Design Review                    | in-person           | in-person           |
+### Individual Checkoffs & Homeworks
+
+#### 304
+
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| ##  | **Theme**                                    | **ICC**                                                              | **HW**                                          |
++=====+==============================================+======================================================================+=================================================+
+| 1   | Basic Circuits                               | Adjustable Power Supplies,                                           | Create a Schematic of your Power Supply Circuit |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Multimeter                                                           |                                                 |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| 2   | Hello World (PSOC)                           | Get PSoC Programmed                                                  | Morse Code HW                                   |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Flash LED                                                            | Create a Symbol for PSOC and add to schematic   |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Add digital input                                                    |                                                 |
++-----+----------------------------------------------+----------------------------------------------------------------------$^*$+-------------------------------------------------+
+| 3   | Digital Switching with Loads                 | Transistors(MOSFETS),                                                | PWM & H-Bridge from PSoC                        |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Back EMF & Diodes,                                                   | Add motor & H-Bridge to Schematic               |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | H-Bridge                                                             |                                                 |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| 4   | Analog Amplification and Signal Conditioning | Analog I/O in PSoC                                                   | Op-Amps (inverting, noninverting)               |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Analog Sensors                                                       | Signal Generator                                |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Add analog to schematic                                              | Oscilloscope                                    |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| 5   | Filters and their applications in switching  | Passive Filters                                                      | Convert ICC parts to selected parts             |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Signal Generator                                                     | Design PCB of your selected subsystem           |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | Oscilloscope                                                         | add UART breakout to schematic                  |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| 6   | Communication                                | PSoC UART                                                            | scanf and printf                                |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | PSoC BLE                                                             | Web App Demo                                    |
+|     |                                              |                                                                      |                                                 |
+|     |                                              | https://youtube.com/playlist?list=PLIOkqhZiy83FM8mrUeyC4ESNMVkMQjj1r |                                                 |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+| 7   |                                              |                                                                      |                                                 |
++-----+----------------------------------------------+----------------------------------------------------------------------+-------------------------------------------------+
+
+### 314
+
+TBD...
+
+-->
+
+<h3 id="concepts">Concepts</h3>
+<h4 id="microcontroller">Microcontroller</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>304</strong></th>
+<th><strong>314</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+<tr>
+<td>DAC</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+<tr>
+<td>UART bidirectional communication and string parsing</td>
+<td>introduced</td>
+<td>refreshed (w/ interrupts)</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>I<span class="arithmatex">\(^2\)</span>C</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>Timers</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>Interrupts</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+</tbody>
+</table>
+<h4 id="circuits">Circuits</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>304</strong></th>
+<th><strong>314</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voltage Dividers</td>
+<td>introduced</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td>Power Supplies</td>
+<td>linear</td>
+<td>switching</td>
+</tr>
+<tr>
+<td>Passive Filters</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+<tr>
+<td>MOSFETS</td>
+<td>introduced</td>
+<td>refreshed (low-voltage discussion)</td>
+</tr>
+<tr>
+<td>BJTs</td>
+<td>introduced</td>
+<td>introduced (low-voltage applications)</td>
+</tr>
+<tr>
+<td>Comparators</td>
+<td>discussed, not used</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>Op-Amps</td>
+<td>introduced</td>
+<td>not explicitly covered</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coding">Coding</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>304</strong></th>
+<th><strong>314</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>introduced</td>
+<td>expanded</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+</tbody>
+</table>
+<h4 id="communication">Communication</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>304</strong></th>
+<th><strong>314</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART</td>
+<td>introduced</td>
+<td>refreshed</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>I<span class="arithmatex">\(^2\)</span>C</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+<tr>
+<td>WiFi</td>
+<td>not covered</td>
+<td>introduced</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="permitted-analog-sensors">Permitted Analog Sensors</h2>
+<p>At least one analog sensor must meet the following two requirements in order to be approved to meet the sensor project requirement:</p>
+<ol>
+<li>Does the device sense something in the outside world and output an analog signal?</li>
+<li>Does the device require a custom-designed non-trivial hardware signal conditioning circuit (specifically, an active filter or amplifier circuit)?</li>
+</ol>
+<p>Examples of <strong>acceptable</strong> analog sensors:</p>
+<p>Underlying Technologies:</p>
+<ul>
+<li>Capacitive Sensors<ul>
+<li>Capacitive <a href="https://en.wikipedia.org/wiki/Pressure_sensor"><em>Pressure sensors</em></a>, <a href="https://en.wikipedia.org/wiki/Capacitive_displacement_sensor"><em>Proximity/Displacement Sensors</em></a></li>
+<li>LC inductive/capacitive sensors (that use AC-domain signals), see the <a href="https://en.wikipedia.org/wiki/Theremin"><em>theremin</em></a> for an example</li>
+</ul>
+</li>
+<li>Resistive sensors<ul>
+<li>Load-cells &amp; wheatstone bridges (requires amplification and filtering)</li>
+</ul>
+</li>
+<li>Inductive sensors<ul>
+<li><a href="https://www.te.com/usa-en/industries/sensor-solutions/insights/lvdt-tutorial.html"><em>Linear Variable Differential Transformers</em></a> (LVDTs)</li>
+<li>Coil-based electromagnetic field sensing solutions (like metal detectors)</li>
+</ul>
+</li>
+<li>Piezoelectric Sensors (vibration, sound, high-frequency signals)</li>
+<li>Microphone with amplifier circuit</li>
+<li>Transistor-based sensors (with active op amps for filtering)</li>
+<li>EM-Domain Sensors (loops, coils, antennae)</li>
+</ul>
+<p>Contexts / Applications:</p>
+<ul>
+<li>Microphones (piezoelectric, electret, condenser, etc) (usually need gain and filtering)</li>
+<li>Time of Flight Sensors (with custom circuitry, <strong>no off-the shelf ultrasonic</strong>)</li>
+<li>Single-IC sensor systems which require one or more external components to operate</li>
+<li>Analog accelerometers</li>
+<li>Temperature Sensors (thermocouples, thermopiles)</li>
+</ul>
+<p>Examples of <strong>unacceptable</strong> analog sensors:</p>
+<ul>
+<li>Push button switches (too simple)</li>
+<li>Keypads (too simple)</li>
+<li>Sensors connected to a comparator (this produces a digital signal, not analog)</li>
+<li>Force-sensitive resistors or photocells utilizing a second fixed resistor to form a voltage divider as the only "signal conditioning" stage</li>
+<li>Potentiometers (already full range, no amplification or filtering typically needed)</li>
+<li>Sensors that need no additional amplification or filtering, such as Hall Effect sensors.</li>
+<li>Sensors with amplification gain less than or equal to 1 (don't need amplification.)</li>
+<li>Pre-packaged IR distance sensors with built-in daughter boards or signal conditioning built in, like <a href="https://www.adafruit.com/product/1031"><em>this</em></a>. You may use plain IR emitter-detector pairs (like <a href="https://www.amazon.com/Infrared-LED-Emitter-and-Detector/dp/B000TLSPNO/ref=sr_1_4?crid=W8JLMUDBYH8N&amp;keywords=infrared+emitter+detector&amp;qid=1641695477&amp;sprefix=infrared+emitter+detector%2Caps%2C110&amp;sr=8-4"><em>this</em></a> or packages that are not signal conditioned, like <a href="https://www.digikey.com/en/products/detail/onsemi/QRE1113/2175990?utm_adgroup=General&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=Shopping_Supplier_onsemi&amp;utm_term=&amp;utm_content=General&amp;gclid=Cj0KCQiAieWOBhCYARIsANcOw0xdnn_-hsCLI8TEaz7LOPg2ZB5r_ynU5lt9dzH0909YG40jNiZTUV0aAmDvEALw_wcB"><em>this</em></a> or <a href="https://www.digikey.com/en/products/detail/tt-electronics-optek-technology/OPB742/374792"><em>that</em></a>).</li>
+</ul>
+<p>Note that you only need one acceptable analog sensor to meet the project requirement (meaning that you can still use push buttons, etc. but they won't count toward the analog sensor project requirement).</p>
+<blockquote>
+<p>See your professor if you are unsure whether your analog sensor is acceptable.</p>
+</blockquote>
+<h2 id="permitted-serial-sensors">Permitted Serial Sensors</h2>
+<p>At least one sensor must meet the following two requirements in order to be approved to meet the sensor project requirement:</p>
+<ol>
+<li>Does the device sense something in the outside world?</li>
+<li>Does the device communicate with the PIC via the approved serial protocol (eg SPI, I<span class="arithmatex">\(^2\)</span>C, or UART)?</li>
+</ol>
+<p>Examples of <strong>acceptable</strong> serial sensor subsystems:</p>
+<ul>
+<li>Digital temperature sensor</li>
+<li>Digital accelerometer</li>
+<li>Digital pressure sensor</li>
+<li>A number of identical sensors connected to a chain of <a href="https://www.electronics-tutorials.ws/sequential/seq_5.html"><em>parallel in, serial out (PISO) shift registers</em></a> (e.g., a number of individual buttons) (I<span class="arithmatex">\(^2\)</span>C or SPI interface)</li>
+</ul>
+<p>Examples of <strong>unacceptable</strong> sensor subsystems:</p>
+<ul>
+<li>Individual pushbutton switches</li>
+<li>Parallel interface keypad (unless it is interfaced through a <a href="https://www.electronics-tutorials.ws/sequential/seq_5.html"><em>PISO shift register</em></a>)</li>
+<li>RFID reader (comes on a daughter board)</li>
+<li>GPS receiver (comes on a daughter board)</li>
+<li>Touch screen (comes on a daughter board)</li>
+</ul>
+<p>Note that you only need one acceptable serial sensor subsystem to meet the project requirement (meaning that you can still use individual pushbuttons, etc. but they won't count toward the serial sensor subsystem project requirement).</p>
+<blockquote>
+<p>See your professor if you are unsure whether your serial sensor is acceptable.</p>
+</blockquote>
+<h2 id="permitted-actuators">Permitted Actuators</h2>
+<p>At least one actuator must meet the following requirements in order to be approved to meet the actuator project requirement:</p>
+<ol>
+<li>Does the device create motion in the outside world?</li>
+<li>Does the device require a custom-designed non-trivial interface circuit, and/or a filtered analog output in order to connect with a microcontroller?</li>
+<li>Does the control software do more than turn a single digital pin on and off?</li>
+</ol>
+<p>Examples of <strong>acceptable</strong> actuators with complex control:</p>
+<ul>
+<li>Motors (brushed, brushless, stepper), linear actuators, or devices that use an electromagnetic field to move or change shape, <em><strong>connected to a complex motor driver IC</strong></em> (including L298 and L293(D) family controllers)</li>
+<li>Speakers connected via a DAC or PWM through an amplification and filtering stage.</li>
+<li>A number of identical actuators connected to a chain of <a href="https://www.electronics-tutorials.ws/sequential/seq_5.html"><em>serial in, parallel out shift registers</em></a> (e.g., a number of individual LEDs, laser diodes, or vibrating motors)</li>
+</ul>
+<!-- - _**(304 only)**_ An analog RGB LED strip with 3 individually-controlled channels (**not** an individually-addressable LED strip) -->
+
+<p>Examples of <strong>unacceptable</strong> actuators:</p>
+<ul>
+<li>RC servos or other actuators that are controlled solely with a PWM signal (internal daughter board)</li>
+<li>Vibratory motors (no need for bidirectional control)</li>
+<li>Buzzers (simplistic control)</li>
+<li>Heating elements (no motion)</li>
+<li>Individual LEDs, light bulbs, and indicators, LCD screens or serial individually-addressable LED strips (no motion)</li>
+</ul>
+<p>Note that you only need one acceptable actuator to meet the project requirement (meaning that you can still use RC servos, individual LEDs, etc. but they won't count toward the actuator project requirement).</p>
+<blockquote>
+<p>See your professor if you are unsure whether your actuator is acceptable.</p>
+</blockquote>
+<p></p>
+
+<blockquote>
+<p><span class="arithmatex">\(^*\)</span> <strong>(304 Only)</strong> Please see your instructor if you would like to consider using a motor for power generation rather than to create motion.</p>
+</blockquote>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q:</strong> When are we allowed to use commercial or breakout boards (e.g., from Sparkfun, Adafruit)?<br>
+<strong>A:</strong> <strong>IN EGR304</strong>, You may <em><strong>not</strong></em> use commercial or breakout boards in <em><strong>any</strong></em> parts of the project that are graded per the specifications above. You are encouraged not to use commercial or breakout boards as an engineering student, but may do so if they are not part of the graded assignment. <strong>Any Exceptions</strong> must be made with prior approval from your professor (e.g., for components only available in a tiny surface mount package).</p>
+<p><strong>Q:</strong> Can we spend our personal money to go above the prototype budget, as long as we don't submit more than the maximum for reimbursement?<br>
+<strong>A:</strong> Yes</p>
+<p><strong>Q:</strong> If part of our circuit uses a non-professor-approved commercial board (e.g., a motor controller), will we get any credit for our custom printed circuit board?<br>
+<strong>A:</strong> See the EGR314 Project Description for more details.</p>
+<p><strong>Q:</strong> <strong>(314 only)</strong> Can we use more than one ESP32 in our system?<br>
+<strong>A:</strong> Yes, absolutely!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../../314/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Selcome">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Selcome
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../submission-best-practices/" class="md-footer__link md-footer__link--next" aria-label="Next: submission best practices">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                submission best practices
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

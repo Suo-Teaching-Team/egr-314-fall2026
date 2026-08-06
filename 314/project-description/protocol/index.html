@@ -1,0 +1,1067 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Protocol Specification - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#daisy-chain-layout" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocol Specification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#daisy-chain-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daisy Chain Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daisy Chain Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      UART Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      IDs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast ID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-bad-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending Bad Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receiving-bad-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiving Bad Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-and-size-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing and Size limits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/project-description/protocol.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Protocol Specification</h1>
+
+<blockquote>
+<p><strong>Attention:</strong> This is a living document, and will change over the course of the semester, with appropriate notice.</p>
+</blockquote>
+<h2 id="daisy-chain-layout">Daisy Chain Layout</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../block-diagram.png" data-desc-position="bottom"><img alt="daisy chain block diagram" src="../block-diagram.png"></a></p>
+<p>Your team will be communicating over a custom UART daisy chain network as seen above.
+All teams will use a 8-wire ribbon cable for power and communication between boards, with a common 2x4 IDC female header connected on both ends.  The following pinouts will be used across all boards.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Pin Name</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">#</th>
+<th style="text-align: left;">Pin Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">9-12V External Power</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">UART</td>
+</tr>
+<tr>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">TBD</td>
+</tr>
+<tr>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">TBD</td>
+</tr>
+<tr>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Ground</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.ribbon-cable.com/wp-content/uploads/sites/25/2020/12/8-Pin-Flat-Ribbon-Cable-IDC-Connector-30cm-5.jpg" data-desc-position="bottom"><img alt="pinout" src="https://www.ribbon-cable.com/wp-content/uploads/sites/25/2020/12/8-Pin-Flat-Ribbon-Cable-IDC-Connector-30cm-5.jpg" style="max-height:200px;"></a></p>
+<p>It will be your team's responsibility to determine how to use the remaining TBD pins for communicating between upstream and downstream teammates.</p>
+<blockquote>
+<p>It is not permitted to connect "peripheral" serial networks together between boards.  You may connect microcontrollers together between/across individual teammate PCBs, but it must be seperate from  that which communicates to peripheral chips such as sensors, LCD's, or motor drivers.</p>
+</blockquote>
+<h3 id="uart-info">UART Info</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed</td>
+<td>9600 Baud</td>
+</tr>
+<tr>
+<td>Num Bytes</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Parity</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Stop Bits</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Flow Control</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="overview">Overview</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../simple-block-diagram.png" data-desc-position="bottom"><img alt="alt text" src="../simple-block-diagram.png"></a></p>
+<p>Each board in the class has a unique ID assigned to it.  If someone wants to send you a packet, they may if they address it to you using your id.  A packet is thus assembled in the following way:  Bytes 1-2 contain a message "prefix".  Byte 3 contains the sender's id.  Byte 4 should be filled with the receiver's id.  The next <span class="arithmatex">\(M&lt;=58\)</span> bytes contain the the message from the sender to the receiver.  The rest of the packet is filled with those <span class="arithmatex">\(M\)</span> bytes of data. The last two bytes contain the message "suffix".</p>
+<p>Details about the message structure can be seen in the table below</p>
+<blockquote>
+<p>For all packets, in order for message buffer to equal 64 bytes, <span class="arithmatex">\(M&lt;=58\)</span>.</p>
+</blockquote>
+<!-- 
+| Byte 1    | Byte 2      | Byte 3             | Byte 4      | ... | Byte 3+N    |
+| --------- | ----------- | ------------------ | ----------- | --- | ----------- |
+| Sender ID | Receiver ID | N (Num Data Bytes) | Data Byte 1 | ... | Data Byte N |
+ -->
+
+<p>| <!-- | Byte 1 | Byte 2    | Byte 3      | Byte 4         | Byte 5         | Byte 6 | ...            | Byte N-2 | Byte N-1 | Byte N |
+| ---- | ------ | --------- | ----------- | -------------- | -------------- | ------ | -------------- | -------- | -------- |
+| 0x41 | 0x5a   | Sender ID | Receiver ID | Message Byte 1 | Message Byte 2 | ...    | Message Byte M | 0x59     | 0x42     | -->    |</p>
+<pre class="mermaid"><code>---
+config:
+  packet:
+    bitsPerRow: 16
+    bitWidth: 64
+---
+packet-beta
+title Message
+0: "0x41"
+1: "0x5a"
+2: "Source ID"
+3: "Dest ID"
+4-61: "Message Data (Variable Length &lt;= 58 Bytes)"
+62: "0x59"
+63: "0x42"</code></pre>
+<p>If you receive a packet addressed to you, you must "dispose" of it after handling its contents by not passing it on downstream.  In this way, all data sent to you terminates with your subsystem and doesn't clog the communication channel.  In this way, if you send a packet that you receive back from your upstream neighbor, you must dispose of it; this either means that you sent a message to someone who is not on your network, or you sent a broadcast message that made it to the whole team.</p>
+<p>Your job is thus to program your protocol to handle the following situations:</p>
+<ol>
+<li>pass along data packets that are not addressed to you</li>
+<li>handle and dispose of data packets that are addressed to you.</li>
+<li>handle and pass along data packets that are broadcast to everyone.</li>
+<li>ensure prioritization between data received, and data your board wants to send.</li>
+<li>handle data packets that are sent from you but not disposed of by anyone else.</li>
+</ol>
+<h3 id="ids">IDs</h3>
+<p>Each board in the class has a unique ID assigned to it.  If someone wants to send you a packet, they may if they address it to you.  Byte 3 of the packet should be filled with the sender's id.  Byte 4 in the packet should be filled with the receiver's address.</p>
+<h4 id="broadcast-id">Broadcast ID</h4>
+<p>If you send to a an address of 0x58 ('X'), this is reserved as a broadcast address.  Your subsystem is required to both handle the packet as well as pass it along downstream. If you were the sender of the packet, it is your job to dispose of the packet once you receive it.</p>
+<h2 id="receiving-data">Receiving Data</h2>
+<p>Any data you receive must be processed for either</p>
+<ul>
+<li>handling by you</li>
+<li>passing to your downstream teammate</li>
+<li>doing both of the above</li>
+</ul>
+<blockquote>
+<p>received data always gets priority over data you wish to send</p>
+</blockquote>
+<h2 id="sending-data">Sending Data</h2>
+<h3 id="priority">Priority</h3>
+<ul>
+<li>If there are no packets in your queue to send, you may transmit a packet</li>
+</ul>
+<blockquote>
+<p>Received data always gets priority, it is thus your responsibility to send received data first.</p>
+</blockquote>
+<p></p>
+
+<blockquote>
+<p>It is also your responsibility to schedule sending packets such that there is sufficient bandwidth for others to send their data as well.
+</p>
+</blockquote>
+<h2 id="sending-bad-data">Sending Bad Data</h2>
+<p>You must carefully consider how you form packets, to ensure the following cases:</p>
+<ul>
+<li>You don't accidentally form messages that contain either packet prefixes or suffixes.  Padding data can help</li>
+<li>...</li>
+</ul>
+<h2 id="receiving-bad-data">Receiving Bad Data</h2>
+<p>It is your responsibility to handle mal-formed packets in the following way:</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>characters transmitted before a message prefix</td>
+<td>ignore</td>
+</tr>
+<tr>
+<td>characters transmitted after a message suffix</td>
+<td>ignore</td>
+</tr>
+<tr>
+<td>messages from someone else that are larger than 64 bytes <em>or</em> <br> messages without a proper terminating character.</td>
+<td><em>do not transmit <br></em> stop storing.</td>
+</tr>
+<tr>
+<td>Addresses from somebody unexpected</td>
+<td>do not transmit</td>
+</tr>
+<tr>
+<td>Addresses to somebody who is not there</td>
+<td>do not transmit</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timing-and-size-limits">Timing and Size limits</h2>
+<p>It is critically important that you consider message size and frequency in your protocol design.  If your team sends more data than the UART system can handle, unintended consequences can occur, like buffer overflows, loss of data, etc  For example, here is a thought experiment</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Baud Rate</td>
+<td>9600 Bits per Second</td>
+</tr>
+<tr>
+<td style="text-align: right;">Bits per Byte</td>
+<td>8</td>
+</tr>
+<tr>
+<td style="text-align: right;">Num Prefix Bytes</td>
+<td>4</td>
+</tr>
+<tr>
+<td style="text-align: right;">Num Suffix Bytes</td>
+<td>2</td>
+</tr>
+<tr>
+<td style="text-align: right;">Message Data Size</td>
+<td>N (this is up to you)</td>
+</tr>
+<tr>
+<td style="text-align: right;">Bytes Per Message</td>
+<td>Data Size + (Num Header Bytes) + (Num Footer Bytes)</td>
+</tr>
+<tr>
+<td style="text-align: right;"># Team Members</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Messages Per Second = (Baud) / (Bits per Byte) / Bytes per Message / (# Team Members)<br>
+Messages Per Second = <span class="arithmatex">\(\frac{Baud}{BitsPerByte*(prefix+suffix+N)*(\#team)))}\)</span><br>
+Messages Per Second = <span class="arithmatex">\(\frac{9600}{8*(6+N)*4)}\)</span>  </p>
+<p>With N=4, this works out to ~ 30Hz.<br>
+With N=30, this works out to ~ 8Hz.  </p>
+<p>Given this theoretical maximum, it will be important to send data <em>much</em> slower than this for debugging (at 1/4 to 1/10 the absolute maximum) until your code is optimized.</p>
+<blockquote>
+<p>This protocol will not be sufficient for high-speed controllers</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

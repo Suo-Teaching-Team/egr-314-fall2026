@@ -1,0 +1,984 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Lab: Surface Mount Soldering - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab: Surface Mount Soldering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface-mount-serial-ic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Surface Mount Serial IC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prior to Demonstration of Proficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2. Individual Demonstration of Proficiency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvas Submission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/labs/surface-mount-soldering/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Lab: Surface Mount Soldering</h1>
+
+<blockquote>
+<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your own soldering skills.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>In this assignment, you will practice soldering common surface mount packages using a soldering iron and tweezers.  The surface mount chip you solder will then be used in the next in-class checkoff for advanced serial communication using SPI or I<span class="arithmatex">\(^2\)</span>C.</p>
+<p>Individually, you must demonstrate proficiency in:</p>
+<ol>
+<li>Soldering a surface mount IC and surface mount resistor to a PCB</li>
+<li>Verifying Connectivity from the breadboard to the pins of the surface mount pins</li>
+</ol>
+<blockquote>
+<p>This In-class checkoff requires advance work in order to complete it within one class period. Please prepare with your team to select the appropriate parts and prepare as much as possible.</p>
+</blockquote>
+<p>Thanks to Zachary for the following video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pucN5eDQErE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r6oD5bdy6EI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Mount Serial IC</td>
+<td>1</td>
+<td>Distributed in class; extras in Peralta 109, type determined by your Team / Subsystem needs (see below)</td>
+</tr>
+<tr>
+<td>Surface mount breakout board</td>
+<td>1</td>
+<td>Distributed in class; extras in Peralta 109, determined by your surface mount IC</td>
+</tr>
+<tr>
+<td>Male header</td>
+<td>1</td>
+<td>Provided in class</td>
+</tr>
+<tr>
+<td>Other Misc Parts</td>
+<td>1</td>
+<td>Located in Peralta, Determined by your Team / Subsystem needs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="surface-mount-serial-ic">Surface Mount Serial IC</h2>
+<p>You will be working with one of the following devices:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Part #</th>
+<th>Digikey URL</th>
+<th>Datasheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hall Effect Sensor</td>
+<td>AS5600-ASOM</td>
+<td><a href="https://www.digikey.com/en/products/detail/ams-osram/AS5600-ASOM/4914332">link</a></td>
+<td><a href="https://ams.com/documents/20143/36005/AS5601_DS000395_3-00.pdf">datasheet</a></td>
+</tr>
+<tr>
+<td>Temperature sensor</td>
+<td>TC74A4-3.3VCTTR</td>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/TC74A4-3-3VCTTR/443268">link</a></td>
+<td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/21462D.pdf">datasheet</a></td>
+</tr>
+<tr>
+<td>Motor Driver</td>
+<td>IFX9201SGAUMA1</td>
+<td><a href="https://www.digikey.com/en/products/detail/infineon-technologies/IFX9201SGAUMA1/5415542">link</a></td>
+<td><a href="https://www.infineon.com/dgdl/Infineon-IFX9201SG-DS-v01_01-EN.pdf?fileId=5546d4624cb7f111014d2e8916795dea&amp;ack=t">datasheet</a></td>
+</tr>
+<tr>
+<td>other<span class="arithmatex">\(^1\)</span></td>
+<td>tbd</td>
+<td>tbd</td>
+<td>tbd</td>
+</tr>
+</tbody>
+</table>
+<!--
+| Breadboard                   | 1            | From your Fall kit                                                                                      |
+| Jumper wires                 | Many         | From your Fall kit                                                                                      |
+| Resistors                    | 2            | Determined by your I$^2$C requirements, located in Peralta 109                |
+| 0.1 µF 0805 Capacitor        | 1            | Provided in class                                                             |
+| Momentary push button                 | 2            |                                                                                                                                                                                      |
+| SOIC-package digital potentiometer IC | 1            | Provided in class                                                                                                                                                                    |
+| (will be provided in class)           |              | [MCP4011](https://www.digikey.com/en/products/detail/microchip-technology/MCP4011-103E-SN/1015488) ([datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/20001978D.pdf)) |
+-->
+
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.bkprecision.com/products/power-supplies/1671A-triple-output-30v-5a-digital-display-dc-power-supply.html">BK Precision Triple-Output 30V, 5A Digital Display DC Power Supply (Model 1671)</a> (<a href="https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/1671A_manual.pdf">manual</a>)</li>
+<li><a href="https://www.bkprecision.com/products/signal-generators/4011A-5-mhz-function-generator.html">BK Precision 5 MHz Function Generator (Model 4011A)</a> (<a href="https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/4011A_manual.pdf">manual</a>)</li>
+<li>External Links<ul>
+<li><a href="https://www.protoexpress.com/blog/common-errors-surface-mount-technology-smt/">8 Common Errors in Surface Mount Technology (SMT)</a></li>
+<li><a href="https://www.seeedstudio.com/blog/2021/06/18/13-common-pcb-soldering-problems-to-avoid/">13 Common PCB Soldering Problems to Avoid</a></li>
+<li><a href="https://www.surfacemountprocess.com/surface-mount-troubleshooting-guide.html">SURFACE MOUNT TROUBLESHOOTING GUIDE</a></li>
+</ul>
+</li>
+<li>External Videos<ul>
+<li><a href="https://www.youtube.com/watch?v=htrcZuK_ZsY">Removal of Solder Using Solder Wick</a></li>
+<li><a href="https://www.youtube.com/watch?v=f9fbqks3BS8">How to Solder Surface Mount parts (it's easy!)</a></li>
+<li><a href="https://www.youtube.com/watch?v=hoLf8gvvXXU">EEVblog #997 - How To Solder Surface Mount Components</a></li>
+</ul>
+</li>
+</ul>
+<!--
+- [MCP4011 Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/20001978D.pdf)
+    - Figure 1-1 and Figure 1-2 show timing diagrams
+    - Section 4.1 describes how to change the output
+-->
+
+<h2 id="prior-to-demonstration-of-proficiency">Prior to Demonstration of Proficiency</h2>
+<ol>
+<li>Preheat your soldering iron to 400º C. Note that you may need to increase the soldering iron temperature later if you are not getting good solder joints. Higher heat means you must solder faster to avoid overheating your components.</li>
+<li>Turn on the fume extractor next to your bench.</li>
+<li>Mount your breakout board in a vice.</li>
+<li>Apply flux from the flux pen to all of the pads on the breakout board. Flux serves two main purposes:<ol>
+<li>It helps clean the pads.</li>
+<li>It helps keep the pads free of oxidation which makes soldering more difficult.</li>
+</ol>
+</li>
+<li>Without the IC on the board, add solder to one of the surface mount pads (and only one) on the footprint. Which pad would be the best to start with?</li>
+<li>Align the IC with the pad on the board and solder the pin to the pad you just tinned. Note that this is easier to do if you hold the IC down with a pair of tweezers.</li>
+<li>Inspect the alignment of the IC with the rest of the pads. It is much easier to make any adjustments now than after you have soldered all of the pins to the board. If the IC is not aligned properly, melt the solder on the pin you soldered and adjust the IC as necessary.</li>
+<li>
+<p>After you have verified your pins are properly aligned with the pads, solder the pin opposite to the one you just soldered.</p>
+<blockquote>
+<p>Take a look at the links in the resources above for identifying common issues with your board.</p>
+</blockquote>
+</li>
+<li>
+<p>Inspect your board again for pin alignment. If the IC pins are not perfectly aligned with the pads, try to re-melt the solder and adjust the alignment of the IC.</p>
+</li>
+<li>After you are satisfied with the alignment of all the pins, solder the rest of the pins on to the board. There are multiple approaches to doing this shown in the resources above, but the important thing is to make sure that your pins have a good solder joint with the pads. Solder bridges can be fixed, so do not panic if you solder two pins together.</li>
+<li>Inspect all your solder joints both visually and by checking for continuity between adjacent pins with a DMM (generally they <strong>should not</strong> have continuity between them). If you have bridged pins, you can fix that by cleaning your soldering iron and then heating up the contact between the pad and the pin until the solder flows. You can also put flux on the bridged pins and reheat them with the soldering iron to remove bridges. Any remaining bridges can be cleaned up with solder wick (see above resources).</li>
+<li>
+<p>(optional) Identify which pin is VDD and which is VSS. Using tweezers, place a 0.1<span class="arithmatex">\(\mu\)</span>F capacitor between the pins and melt the solder of one pin. After the capacitor is held in place, solder the other end and then go back and add more solder to the first end</p>
+<blockquote>
+<p>Note: It is best practice to place a .1 <span class="arithmatex">\(\mu\)</span>F capacitor in close proximity to the power / ground pins of your IC.  For the purposes of this and the next assignment, you may place it close on your breadboard.</p>
+</blockquote>
+</li>
+<li>
+<p>Solder male to male headers to the board so that it can be plugged into a breadboard.</p>
+</li>
+<li>Turn off the soldering iron, making sure to melt some solder onto the tip in order to protect the tip. Note that you should never leave a soldering iron on if you are not using it.</li>
+<li>Clean your board using isopropyl alcohol. Note that flux is corrosive to copper, so if you do not clean up your board, the flux will eventually eat away your traces.</li>
+</ol>
+<h2 id="part-2-individual-demonstration-of-proficiency">Part 2. Individual Demonstration of Proficiency</h2>
+<p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
+<ol>
+<li>Your soldered board (each student should solder their own board)</li>
+<li>Verified continuity to each pin on your surface mount part.</li>
+</ol>
+<p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p><strong>No Canvas submission is required.</strong></p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Demonstration</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.  Soldered PCB</td>
+<td>25</td>
+</tr>
+<tr>
+<td>2.  Verified Connections with no shorts to neighbors</td>
+<td>75</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<!--
+
+16. Attach your newly soldered PCB to your breadboard and wire it up according to the schematic below:
+
+    ![](image11.png)
+
+17. Attach an oscilloscope probe to the W (wiper) pin on the MCP4011. This is the output of the potentiometer.
+18. Set the function generator to a low frequency (<10 Hz) square wave. ([Function generator manual](https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/4011A_manual.pdf))
+19. Study section 5.2 of the [MCP4011 datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/20001978D.pdf) to determine how to change the output of the MCP4011. Observe this change on the oscilloscope.
+
+-->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,1189 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+            
+
+        
+
+    
+      
+        <title>Ideation and Concept Generation - Embedded Systems Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-header__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embedded Systems Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ideation and Concept Generation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  314
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Embedded Systems Assignments" class="md-nav__button md-logo" aria-label="Embedded Systems Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+
+    </a>
+    Embedded Systems Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd_assignments" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    314
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            314
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Info
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Project Info
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-description/protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocol Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3X4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3X4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    course sequence requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    submission best practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-background-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Background reading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-learn-about-wildfire-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Learn about Wildfire Response
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-generate-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Generate Ideas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-sort-rank-and-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Sort, Rank, and Group
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-create-a-concept-sketches-or-similar-for-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Create a concept sketches (or similar) for your project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Presentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homework-preparation-and-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homework Preparation and Submission
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homework Preparation and Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submission
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualitative-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qualitative Assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsequent-uses-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subsequent Uses of this Document
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequently Asked Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd_assignments/edit/main/docs/314/team-assignments/concept-generation-and-design-ideation/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Ideation and Concept Generation</h1>
+
+<p><strong><em>Team Assignment</em></strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>The objective of this assignment is to ideate design features of your product and to provide the client with alternating visions of your project.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>
+<p>Use the Interaction you had with the Stakeholder meeting involving Wildfire Response to complete this assignment. </p>
+</li>
+<li>
+<p><a href="/3x4/course-sequence-requirements/">EGR 304/314 Course Sequence Requirements</a></p>
+</li>
+<li>
+<p>Ideation</p>
+<ul>
+<li>General<ul>
+<li><a href="https://www.interaction-design.org/literature/topics/ideation">https://www.interaction-design.org/literature/topics/ideation</a></li>
+<li><a href="https://www.justinmind.com/blog/8-ux-ideation-techniques-to-try-out/">https://www.justinmind.com/blog/8-ux-ideation-techniques-to-try-out/</a></li>
+</ul>
+</li>
+<li>How to Ideate / Effective Ideation<ul>
+<li><a href="https://uxplanet.org/whats-the-deal-with-ideation-e02324e95c8">https://uxplanet.org/whats-the-deal-with-ideation-e02324e95c8</a></li>
+<li><a href="https://www.nngroup.com/articles/ideation-in-practice/">https://www.nngroup.com/articles/ideation-in-practice/</a></li>
+</ul>
+</li>
+<li>Brainstorm techniques<a id=""></a><ul><a id="">
+</a><li><a id=""></a><a href="https://lucidspark.com/blog/4-group-brainstorming-techniques">https://lucidspark.com/blog/4-group-brainstorming-techniques</a></li>
+<li><a href="https://formlabs.com/blog/brainstorming-product-ideas/">https://formlabs.com/blog/brainstorming-product-ideas/</a></li>
+<li><a href="https://www.figma.com/blog/the-five-stages-of-an-effective-brainstorm/">https://www.figma.com/blog/the-five-stages-of-an-effective-brainstorm/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mockups<ul>
+<li><a href="https://uxdesign.cc/how-google-approaches-the-process-of-ideation-f2fc00091f32">https://uxdesign.cc/how-google-approaches-the-process-of-ideation-f2fc00091f32</a></li>
+</ul>
+</li>
+<li>Other<ul>
+<li><a href="https://canvas.asu.edu">Canvas</a> discussion board</li>
+<li>Web Resources<ul>
+<li><a href="https://vimm.com/what-is-a-vector-image/">What is a Vector Image?</a></li>
+</ul>
+</li>
+<li>Powerpoint<ul>
+<li><a href="https://www.youtube.com/watch?v=bP9VJ03s8Gw">How to record your presentation</a></li>
+</ul>
+</li>
+<li>Embedded Systems Design Resources website<ul>
+<li><a href="https://embedded-systems-design.github.io/drawing-software/">Drawing Software</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="assignment">Assignment</h2>
+<blockquote>
+<p>Note: This assignment will be posted to your <strong><em>team's</em></strong> living report website on Github</p>
+</blockquote>
+<h3 id="step-1-background-reading">Step 1: Background reading</h3>
+<ol>
+<li>
+<p>Review the <a href="/3x4/course-sequence-requirements/">Course Sequence Requirements</a>to ensure you are familiar with the particular parameters of this semesters's project.</p>
+</li>
+<li>
+<p>See the "<a href="#7b9jkwk9s0hv">Brainstorm Techniques</a>" links above for good ideas on how to generate more ideas.</p>
+<p>These two articles share more information on <a href="https://uxplanet.org/whats-the-deal-with-ideation-e02324e95c8">successful ideation techniques</a> and data on the <a href="https://www.nngroup.com/articles/ideation-in-practice/">effectiveness</a> of ideation and brainstorming.</p>
+</li>
+</ol>
+<h3 id="step-2-learn-about-wildfire-response">Step 2: Learn about Wildfire Response</h3>
+<p>In two paragraphs, describe:</p>
+<ol>
+<li>What is the goal of your project in terms of Wildfire Response?  </li>
+<li>Who is your audience? </li>
+</ol>
+<h3 id="step-3-generate-ideas">Step 3: Generate Ideas</h3>
+<p>Perform a product brainstorm to generate a large number of features, concepts, and ideas about what your product <em>COULD</em> be. Use sticky notes, a whiteboard, chalkboard, or an online whiteboard / slide tool, to generate ~100 or so brief concepts / features / ideas for your product.</p>
+<p>During your Brainstorm, think of solutions to the following questions, derived from the readings:</p>
+<ol>
+<li>
+<p>What kinds of cues will you provide to make the use of your device easier?</p>
+</li>
+<li>
+<p>What role will durability, safety, and comfort play in the user experience?</p>
+</li>
+<li>What kind of instruction will be needed to use the device? </li>
+</ol>
+<p>There are some basic rules to brainstorming, spelled out <a href="https://lucidspark.com/blog/4-group-brainstorming-techniques">here</a>:</p>
+<ul>
+<li>Don't criticize any ideas.</li>
+<li>Encourage a wide variety of ideas.</li>
+<li>Build on each other's ideas.</li>
+<li>Don't be afraid to share unrealistic or unconventional ideas.</li>
+</ul>
+<blockquote>
+<p>Take a snapshot of your board here at this point before you start to rearrange it.</p>
+</blockquote>
+<h3 id="step-4-sort-rank-and-group">Step 4: Sort, Rank, and Group</h3>
+<p>Some of the most effective phases of ideation come <strong><em>after</em></strong> the brainstorm session. Seeing innovative patterns in the noise, grouping features in ways other products don't, and re-mixing good ideas into better ideas is often just as effective as coming up with many disjointed ideas. Take some time to discuss your brainstorm.</p>
+<blockquote>
+<p>Take a snapshot of your board here at key points in this process.</p>
+</blockquote>
+<ol>
+<li>Sort your features / ideas thematically.  Maybe some ideas are functions.  Perhaps others are strategies for keeping attention; maybe others are user interface ideas.  Regardless, group them along the different themes that emerge from the brainstorm.</li>
+<li>Spend some time ranking top ideas.  You can star good ideas, or simply put them at the top of their group.</li>
+<li>Recombine and regenerate new ideas from the ones that you like the most.</li>
+<li>Start grouping the best ideas together into your "killer app"</li>
+</ol>
+<blockquote>
+<p>Take a snapshot of your board here at this point.</p>
+</blockquote>
+<h3 id="step-5-create-a-concept-sketches-or-similar-for-your-project">Step 5: Create a concept sketches (or similar) for your project</h3>
+<p>Develop one visually-engaging representation for a project concept that uses the top brainstormed concepts identified in the previous step.  The purpose of this concept is to highlight the features grouped into each concept developed above. Possible representations include:</p>
+<ul>
+<li>
+<p>Physical cardboard / wood / 3-D printed / etc. mockup</p>
+<ul>
+<li>Take photos of your mockup.</li>
+<li>Use a <strong>vector based drawing program</strong> to annotate your photos with text boxes and arrows to highlight <strong><em>all</em></strong> features included in this design concept.</li>
+</ul>
+<blockquote>
+<p>See <a href="https://vimm.com/what-is-a-vector-image/">What is a Vector Image?</a> and <a href="https://embedded-systems-design.github.io/drawing-software/">Suggested Drawing Software</a> on the Embedded Systems Design website.</p>
+</blockquote>
+</li>
+<li>
+<p>A detailed, <strong><em>computer-generated, vector-based sketch</em></strong> of the Wildfire Response concept</p>
+<ul>
+<li>Annotate your photos with text boxes and arrows to highlight <strong><em>all</em></strong> features included in this design concept.</li>
+<li><strong>No hand-drawn sketches.</strong>  If you decide to use CAD, do not just produce a dimensioned engineering drawing.  The goal is to highlight the features and functionality of your Project</li>
+</ul>
+<blockquote>
+<p>See <a href="https://vimm.com/what-is-a-vector-image/">What is a Vector Image?</a> and <a href="https://embedded-systems-design.github.io/drawing-software/">Suggested Drawing Software</a> on the Embedded Systems Design website.</p>
+</blockquote>
+</li>
+<li>
+<p>Visual <em>story-based</em> representation of how your team's design will be used by a user (user experience). Examples include (but not limited to):</p>
+<ul>
+<li>Computer-generated, vector-based annotated storyboard, comic strip, or graphic novel. Make sure to have at least one human character in the story. <strong>No hand-drawn sketches.</strong></li>
+<li>Narrated <a href="https://www.youtube.com/watch?v=8qxLPUOMLJY">stop motion animation video</a> telling the story of the product in a single short (&lt;5 minutes) video.</li>
+<li>Mock print/video advertisement or infomercial for the device and how it solves the problems of the user.</li>
+</ul>
+<blockquote>
+<p>As with other representations, ensure <strong><em>all</em></strong> features and ideas included with the product concept are included in the story, video, ad, etc.</p>
+</blockquote>
+</li>
+<li>
+<p>Other form of representation (<em>with prior approval</em> from your instructor).</p>
+</li>
+</ul>
+<p>Describe, in one page (in word, single spaced, 12pt times new roman font),  </p>
+<ul>
+<li>How the features highlighted in your concept sketch satisfy the needs of Wildfire response.  </li>
+<li>
+<p>How the functionality will will be split across four teammates  (See the project description)</p>
+<ul>
+<li>Internet-based two-way communication</li>
+<li>Human machine interface via a screen and buttons</li>
+<li>Sensor and Actuator-based controlled response</li>
+</ul>
+</li>
+<li>
+<p>What kinds of cues will you provide to make the use of your device easier?</p>
+</li>
+<li>How do you plan on designing your "controls" </li>
+<li>What role will durability, safety, and comfort play in the user experience?</li>
+<li>What kind of instruction will be needed to use the device? </li>
+</ul>
+<h3 id="step-6-presentation">Step 6: Presentation</h3>
+<ol>
+<li>
+<p>Create a five-minute powerpoint(roughly 1 slide / minute):</p>
+<ol>
+<li>Team Organization<ol>
+<li>Team members</li>
+<li>Charter</li>
+<li>Mission Statement</li>
+</ol>
+</li>
+<li>Wildfire Response Summary<ol>
+<li>Overview of what you learned from the talk/visit</li>
+<li>What is the goal of your device?</li>
+<li>Who is your audience?</li>
+</ol>
+</li>
+<li>Design Ideation<ol>
+<li>Organization of your brainstorm session</li>
+<li>Screenshot of your "board" mid-process</li>
+<li>Final layout of your sorted, ranked, and refined concepts</li>
+</ol>
+</li>
+<li>Overview of your design concept "sketch"<ol>
+<li>Annotated figure from step 4, plus feature walkthrough</li>
+<li>Summary of your answers from the passage you wrote.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Practice</strong> your presentation to ensure you meet the general length requirements for the video.</p>
+</li>
+<li><strong>Record your presentation</strong> and save as an <code>.mp4</code>. See the resources above for tutorials.</li>
+<li><strong>Upload to Youtube.</strong>  You may set the video to unlisted or public, but do not set it to private.</li>
+<li><strong>Embed in your team's website.</strong>   Once uploaded, go to the video page on youtube and click "share".  Select "embed" from the sharing options and copy the html code.  This code can be pasted directly into the markdown file for this assignment.
+    &gt; <strong>Note:</strong> Please refrain from uploading videos to Canvas or sharing links to files on google drive. Videos <strong><em>must be embedded</em></strong> on your website via YouTube.</li>
+</ol>
+<h2 id="homework-preparation-and-submission">Homework Preparation and Submission</h2>
+<p>This work will be used -- and graded -- in multiple ways. It will be checked for completeness on the date given in Canvas.</p>
+<h3 id="preparation">Preparation</h3>
+<p>Please prepare this assignment as a new page on your team's living report website.  Assemble:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Your response from part 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The many phases of your brainstorm session<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> initial capture of design features</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> during and after sorting, ranking and, refinement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> features grouped into your single design concept</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Design concept sketch</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> 1-page rationale</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> embedded youtube video presentation</li>
+</ul>
+<p>Assemble this into a new page on your team's website called "Ideation and Concept Generation"</p>
+<p>Once completed,</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Create a link to this new page on the datasheet's main landing page.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Check the link to ensure that it works</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> export this new page as a pdf</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> submit the pdf and link to Canvas</li>
+</ul>
+<blockquote>
+<p>The new page representing your assignment should not present as a page of links.  Do not use it to link to other documents <em>especially living documents</em>, such as google docs, draw.io drawings, or google sheets.    Rather, contents from other documents should be exported, saved in your repository, and hosted natively in markdown (or if need be html) on the site itself.</p>
+</blockquote>
+<h3 id="submission">Submission</h3>
+<p>To submit a complete assignment, please submit:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> A working URL to the new "Ideation and Concept Generation" page.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> the <strong>exported PDF</strong> for easier review</li>
+</ul>
+<p>Both items must be submitted, by the deadline in the Canvas course calendar, in order to receive full credit.  It is your responsibility to ensure that your submission to Canvas was successful. Late Canvas submissions will be graded per the policy in the syllabus.</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: right;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Step 2</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;">Step 3</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">Step 4</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;">Step 5</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;">Step 6</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="qualitative-assessment">Qualitative Assessment</h3>
+<p>This document will assessed for quality by the teaching team when reviewed during the external design review.  Before then, please engage with the teaching team during office hours and/or classtime to review this document for ways to improve it.  We are happy to provide feedback, which will be your responsibility to integrate and address before the external design review.</p>
+<p>Qualitative grading will assess how closely te team follows instructions, for general formatting, layout, organization, and legibility, and to ensure feedback-based updates were applied to all sections. Items above will be graded based on the following scale (please see the syllabus for a full description of each):</p>
+<ul>
+<li>100% Exceeds Expectations</li>
+<li>85% Above Expectations</li>
+<li>70% Meets Expectations</li>
+<li>55% Below Expectations</li>
+<li>40% Does Not Meet Expectations</li>
+<li>0 Missing / Not Submitted</li>
+</ul>
+<h3 id="subsequent-uses-of-this-document">Subsequent Uses of this Document</h3>
+<p>This document will be used by your teammates to help make decisions on how to distribute functionality across your teammates.
+Additionally, as part of your living report website -- a public website -- this document should be updated and improved throughout the semester in order to reflect your most current design.
+It will also be reviewed seen by external reviewers who will be given the opportunity to provide direct and indirect feedback, and as part of your team's final report.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q:</strong> Will we be building functioning physical prototypes this semester?<br>
+<strong>A:</strong> Yes</p>
+<h2 id="checklist">Checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The page is easy to find and well-formatted on your team site</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> You clearly identify the goal of your project, per the instructions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> You clearly identify your audience.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Brainstorm focuses on ideating solutions for audience cues, controls, durability, safety, comfort, instruction,</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The page includes ~100 brainstormed solutions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The page includes snapshots of the brainstorm from different stages of organization</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The features / ideas are sorted or grouped</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The features / ideas are ranked</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The page includes a high quality concept drawing, image, figure, mockup, or animation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The final, selected features from the brainstorm are highlighted / annotated with labels and arrows</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The final concept includes a well-written, 1-page description that addresses how selected and highlighted attributes fulfil user needs from the reading.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> Concept generation includes video</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled="" checked=""><span class="task-list-indicator"></span></label> The video is embedded in the site</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 Dan Aukes and others.  This content may not be copied or reproduced in any form without the express written consent of the authors
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
