@@ -44,21 +44,21 @@ The objective of this assignment is to ideate design features of your product an
 
 1. Review the [Course Sequence Requirements](https://suo-teaching-team.github.io/egr-314-fall2026/3x4/course-sequence-requirements/)to ensure you are familiar with the particular parameters of this semesters's project.
 
-1. See the "[Brainstorm Techniques](#7b9jkwk9s0hv)" links above for good ideas on how to generate more ideas.
+1. See the Brainstorm Techniques links above for good ideas on how to generate more ideas.
 
     These two articles share more information on [successful ideation techniques](https://uxplanet.org/whats-the-deal-with-ideation-e02324e95c8) and data on the [effectiveness](https://www.nngroup.com/articles/ideation-in-practice/) of ideation and brainstorming.
 
-### Step 2: Learn about Wildfire Response
+### Step 2: Learn about your project
 
 
 In two paragraphs, describe:
 
-1. What is the goal of your project in terms of Wildfire Response?  
+1. What is the goal of your project?  
 1. Who is your audience? 
 
 ### Step 3: Generate Ideas
 
-Perform a product brainstorm to generate a large number of features, concepts, and ideas about what your product *COULD* be. Use sticky notes, a whiteboard, chalkboard, or an online whiteboard / slide tool, to generate ~100 or so brief concepts / features / ideas for your product.
+Perform a product brainstorm to generate a large number of features, concepts, and ideas about what your product *COULD* be. Use sticky notes, a whiteboard, chalkboard, or an online whiteboard / slide tool, to generate ~20 or so brief concepts / features / ideas for your product.
 
 During your Brainstorm, think of solutions to the following questions, derived from the readings:
 
