@@ -10,7 +10,7 @@ The objective of this assignment is to ideate design features of your product an
 
 ## Resources
 
-* Use the Interaction you had with the Stakeholder meeting involving Wildfire Response to complete this assignment. 
+* Use the Interaction you had with the Stakeholder meeting to complete this assignment. 
    
 * [EGR 304/314 Course Sequence Requirements](/3x4/course-sequence-requirements/)
 
