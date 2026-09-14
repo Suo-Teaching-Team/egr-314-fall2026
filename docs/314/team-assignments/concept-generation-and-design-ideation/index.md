@@ -42,7 +42,7 @@ The objective of this assignment is to ideate design features of your product an
 
 ### Step 1: Background reading
 
-1. Review the [Course Sequence Requirements](/3x4/course-sequence-requirements/)to ensure you are familiar with the particular parameters of this semesters's project.
+1. Review the [Course Sequence Requirements](https://suo-teaching-team.github.io/egr-314-fall2026/3x4/course-sequence-requirements/)to ensure you are familiar with the particular parameters of this semesters's project.
 
 1. See the "[Brainstorm Techniques](#7b9jkwk9s0hv)" links above for good ideas on how to generate more ideas.
 
